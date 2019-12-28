@@ -1,102 +1,118 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>c语言二级基础内容 | 坦吉</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1577513518069">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1577512919515">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://supertange.github.io/styles/main.css">
 
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105219429-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105219429-1');
+</script>
 
 
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://supertange.github.io">
-        <img class="avatar" src="https://supertange.github.io/images/avatar.png?v=1577512919515" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://supertange.github.io">
-        <h1 class="site-title">坦吉</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://supertange.github.io">
+  <img class="avatar" src="https://supertange.github.io/images/avatar.png?v=1577513518069" alt="">
+  </a>
+  <h1 class="site-title">
+    坦吉
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/supertange" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+        <a href="https://github.com/supertange" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+      
+    
+      
+        <a href="https://github.com/supertange" target="_blank">
+          <i class="fab fa-weibo"></i>
+        </a>
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="menu purple-link">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-          <h2 class="post-title">c语言二级基础内容</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2017-01-11</span>
-            
+          <article class="post">
+            <h2 class="post-title">
+              c语言二级基础内容
+            </h2>
+            <div class="post-info">
               <span>
-                <i class="icon-pricetags-outline"></i>
-                
-                  <a href="https://supertange.github.io/tag/cSzwzzCQQ">
-                    c语言
-                    
-                  </a>
-                
+                2017-01-11
               </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://supertange.github.io/tag/cSzwzzCQQ" class="post-tag">
+                  # c语言
+                </a>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
 <h2 id="问题分析">问题分析</h2>
 <!--more-->
 <h2 id="结构化程序的思想">结构化程序的思想</h2>
@@ -146,57 +162,104 @@
 <li>exe文件生成后obj文件可以删掉，节省磁盘空间。</li>
 </ol>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90">问题分析</a></li>
+<li><a href="#%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%80%9D%E6%83%B3">结构化程序的思想</a><br>
+*
+<ul>
+<li><a href="#1-%E8%87%AA%E9%A1%B6%E5%90%91%E4%B8%8B">1. 自顶向下</a></li>
+<li><a href="#2%E9%80%90%E6%AD%A5%E7%BB%86%E5%8C%96">2.逐步细化</a></li>
+<li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1">模块化设计</a></li>
+<li><a href="#%E9%99%90%E5%88%B6%E4%BD%BF%E7%94%A8goto%E8%AF%AD%E5%8F%A5">限制使用goto语句</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%A8%A1%E5%9D%97%E5%88%92%E5%88%86%E5%BA%94%E9%81%B5%E5%BE%AA%E7%9A%84%E5%87%86%E5%88%99%E6%98%AF%E9%AB%98%E5%86%85%E8%81%9A%E4%BD%8E%E8%80%A6%E5%90%88%E6%A8%A1%E5%9D%97%E5%A4%A7%E5%B0%8F%E9%80%82%E5%BD%93%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E9%80%82%E5%BD%93">软件设计中模块划分应遵循的准则是：高内聚低耦合，模块大小适当，依赖关系适当。</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%AD%E9%9C%80%E8%A6%81%E8%BF%9B%E8%A1%8C%E5%93%AA%E4%BA%9B%E9%98%B6%E6%AE%B5">软件开发中，需要进行哪些阶段</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E7%9A%84%E4%B8%80%E8%88%AC%E6%80%A7%E8%B4%A8%E5%8C%85%E6%8B%AC">算法的一般性质包括</a>
+<ul>
+<li><a href="#1%E9%80%9A%E7%94%A8%E6%80%A7">(1)通用性</a></li>
+<li><a href="#2%E6%9C%89%E6%95%88%E6%80%A7">(2)有效性</a></li>
+<li><a href="#3%E7%A1%AE%E5%AE%9A%E6%80%A7definiteness">(3)确定性(Definiteness)</a></li>
+<li><a href="#4%E6%9C%89%E7%A9%B7%E6%80%A7finiteness">(4)有穷性（Finiteness）</a></li>
+<li><a href="#5%E5%8F%AF%E8%A1%8C%E6%80%A7effectiveness">(5)可行性(Effectiveness)</a></li>
+<li><a href="#6%E9%AB%98%E6%95%88%E6%80%A7high-efficiency">(6)高效性（High efficiency）</a></li>
+<li><a href="#7-%E5%81%A5%E5%A3%AE%E6%80%A7robustness">(7) 健壮性（Robustness）</a></li>
+</ul>
+</li>
+<li><a href="#c%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%96%E8%AF%91">c语言的编译</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://supertange.github.io/post/MarkDown">
+            <div class="next">下一篇</div>
+            <a href="https://supertange.github.io/post/MarkDown">
               <h3 class="post-title">
-                下一篇：MarkDown的基本使用方法
+                MarkDown的基本使用方法
               </h3>
             </a>
           </div>
-          
-      </div>
+        
 
-      
+        
 
-      <div class="site-footer">
-  <div class="slogan">温故而知新</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by Tange | <a class="rss" href="https://supertange.github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by Tange | 
+  <a class="rss" href="https://supertange.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
+<script>
+  hljs.initHighlightingOnLoad()
 
-    </div>
-    <script type="application/javascript">
+  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-hljs.initHighlightingOnLoad()
+  // This should probably be throttled.
+  // Especially because it triggers during smooth scrolling.
+  // https://lodash.com/docs/4.17.10#throttle
+  // You could do like...
+  // window.addEventListener("scroll", () => {
+  //    _.throttle(doThatStuff, 100);
+  // });
+  // Only not doing it here to keep this Pen dependency-free.
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  window.addEventListener("scroll", event => {
+    let fromTop = window.scrollY;
+
+    mainNavLinks.forEach((link, index) => {
+      let section = document.getElementById(decodeURI(link.hash).substring(1));
+      let nextSection = null
+      if (mainNavLinks[index + 1]) {
+        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+      }
+      if (section.offsetTop <= fromTop) {
+        if (nextSection) {
+          if (nextSection.offsetTop > fromTop) {
+            link.classList.add("current");
+          } else {
+            link.classList.remove("current");    
+          }
+        } else {
+          link.classList.add("current");
+        }
+      } else {
+        link.classList.remove("current");
+      }
+    });
+  });
 
 </script>
 
-
-
-
+      </div>
+    </div>
   </body>
 </html>
