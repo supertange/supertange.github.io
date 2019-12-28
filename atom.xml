@@ -1,53 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://supertange.github.io</id>
     <title>坦吉</title>
-    <updated>2019-12-28T05:34:08.125Z</updated>
+    <updated>2019-12-28T05:50:58.842Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://supertange.github.io"/>
+    <link rel="self" href="https://supertange.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://supertange.github.io/images/avatar.png</logo>
+    <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 坦吉</rights>
     <entry>
         <title type="html"><![CDATA[使用IDEA intellij 必须掌握的使用技巧！]]></title>
-        <id>http://localhost:4000/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
-        <link href="http://localhost:4000/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
+        <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
+        <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
         </link>
         <updated>2019-12-24T08:43:37.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[用「zsh」 「oh my zsh」「powerlevel10k」打造属于你的终端环境(Mac)]]></title>
-        <id>http://localhost:4000/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac</id>
-        <link href="http://localhost:4000/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">
+        <id>https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac</id>
+        <link href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">
         </link>
         <updated>2019-12-24T06:18:35.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>http://localhost:4000/post/hello-gridea</id>
-        <link href="http://localhost:4000/post/hello-gridea">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[基础位运算]]></title>
-        <id>http://localhost:4000/post/基础位运算</id>
-        <link href="http://localhost:4000/post/基础位运算">
+        <id>https://supertange.github.io/post/基础位运算</id>
+        <link href="https://supertange.github.io/post/基础位运算">
         </link>
         <updated>2017-03-03T13:53:20.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[必须熟练排序方法]]></title>
-        <id>http://localhost:4000/post/必须熟练排序方法</id>
-        <link href="http://localhost:4000/post/必须熟练排序方法">
+        <id>https://supertange.github.io/post/必须熟练排序方法</id>
+        <link href="https://supertange.github.io/post/必须熟练排序方法">
         </link>
         <updated>2017-02-11T12:47:12.000Z</updated>
         <summary type="html"><![CDATA[<p>如题</p>
@@ -57,22 +44,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2017年我的规划]]></title>
-        <id>http://localhost:4000/post/2017年我的规划</id>
-        <link href="http://localhost:4000/post/2017年我的规划">
+        <id>https://supertange.github.io/post/2017年我的规划</id>
+        <link href="https://supertange.github.io/post/2017年我的规划">
         </link>
         <updated>2017-02-03T03:38:26.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[c语言基础小结]]></title>
-        <id>http://localhost:4000/post/c语言基础小结</id>
-        <link href="http://localhost:4000/post/c语言基础小结">
+        <id>https://supertange.github.io/post/c语言基础小结</id>
+        <link href="https://supertange.github.io/post/c语言基础小结">
         </link>
         <updated>2017-02-03T03:32:44.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[c语言知识查漏补缺]]></title>
-        <id>http://localhost:4000/post/c语言知识查漏补缺</id>
-        <link href="http://localhost:4000/post/c语言知识查漏补缺">
+        <id>https://supertange.github.io/post/c语言知识查漏补缺</id>
+        <link href="https://supertange.github.io/post/c语言知识查漏补缺">
         </link>
         <updated>2017-01-12T08:44:57.000Z</updated>
         <summary type="html"><![CDATA[<p>c语言。。现在好多都搞忘了，补吧😂。</p>
@@ -88,8 +75,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[unix入门]]></title>
-        <id>http://localhost:4000/post/unix入门</id>
-        <link href="http://localhost:4000/post/unix入门">
+        <id>https://supertange.github.io/post/unix入门</id>
+        <link href="https://supertange.github.io/post/unix入门">
         </link>
         <updated>2017-01-12T06:56:24.000Z</updated>
         <summary type="html"><![CDATA[<p>一 Unix入门</p>
@@ -101,9 +88,22 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[堆和栈的区别]]></title>
-        <id>http://localhost:4000/post/堆和栈的区别</id>
-        <link href="http://localhost:4000/post/堆和栈的区别">
+        <id>https://supertange.github.io/post/堆和栈的区别</id>
+        <link href="https://supertange.github.io/post/堆和栈的区别">
         </link>
         <updated>2017-01-12T05:20:53.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[c语言二级基础内容]]></title>
+        <id>https://supertange.github.io/post/c语言二级基础内容</id>
+        <link href="https://supertange.github.io/post/c语言二级基础内容">
+        </link>
+        <updated>2017-01-11T08:32:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
+<h2 id="问题分析">问题分析</h2>
+]]></summary>
+        <content type="html"><![CDATA[<p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
+<h2 id="问题分析">问题分析</h2>
+]]></content>
     </entry>
 </feed>
