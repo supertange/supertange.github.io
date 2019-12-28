@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>unix入门 | 坦吉</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1577511241262">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105219429"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105219429');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://localhost:4000">
+        <img src="http://localhost:4000/images/avatar.png?v=1577511241262" class="site-logo">
+        <h1 class="site-title">坦吉</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="http://localhost:4000/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/supertange" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://supertange.github.io" target="_blank">Gridea</a> | <a class="rss" href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">unix入门</h2>
+            <div class="post-date">2017-01-12</div>
+            
+            <div class="post-content">
+              <p>一 Unix入门</p>
+<p>一个8位的组合称为一个字节，一个字节表示一个字符，一个汉字为两个字符</p>
+<!--more-->
+<p>$  --系统提示符</p>
+<p>login Linux支持多用户，登录你的用户名</p>
+<p>$  exit  退出登录</p>
+<p>date :显示时间</p>
+<p>unix下：</p>
+<p>who	查看有谁登陆到了系统<br>
+--who am i<br>
+--who -q登录用户人数 ps：Linux(who --count)<br>
+--who -b系统启动时间<br>
+--who -H在每一行上显示标题 ps：Linux(who --heading)</p>
+<p>col  :显示本月日历表<br>
+-cal 年份: 显示该年的日历<br>
+-cal -j: 显示本月在一年中为第多少天<br>
+-cal -j +年: 显示一年的日期，按照顺序来</p>
+<p>man :该命令课显示系统文档的内容</p>
+<p>命令输入错误时   可按ctrl+h逐个字符进行删除<br>
+ctrl+u逐行删除<br>
+(在系统识别中ctrl+u/h会被当作一个字符)</p>
+<p>中断程序操作     ctrl+c</p>
+<p>unix shell 实现用户与unix系统间的交互，每一次输入[return]					时，shell首先查找是否含有此函数，然后再实行操作</p>
+<p>unix 启动时，操作系统的常驻程序（内核）被载入到内存，而操作系统的其余成分仍然被保留在硬盘中，当用户登录时，shell程序才被载入内存</p>
+<p>二 vi编辑器入门</p>
+<pre><code>在终端中输入vi即可进入vi编辑器，进入后为vi编辑器的命令模式，按i键进入文本编辑模式，即可进行内容编辑，编辑完成后用户将要保存，按esc健退出文本编辑模式，按“：”进入命令行模式，输入wq(write，qiut)即保存并退出。
+	基本用法：
+	1 命令行输入q！表示强制退出不保存
+	2 命令模式下的方向键 ⬆️ (k)⬇ ️(j)⬅(h) ️➡(k)️️
+	3 在命令模式下输入i即在光标前插入字段，输入a即在光标后插入字段，输入o即在光标下一行插入一行文本；输入I即在所在行插入文本，输入A即在所在行末尾插入文本，输入O即在光标上一行插入一行文本。
+</code></pre>
+<p>###ls操作<br>
+ls -a列出所有的文件包括隐藏文件<br>
+ls -l列出文件的详细信息<br>
+ls -l -a可列出所有文件的详细信息<br>
+ls -cl 可按名字排序并显示详细信息<br>
+####如下ls -l</p>
+<h4 id="drwxr-xr-x-4-ht-staff-136-11-24-0908-repository">drwxr-xr-x    4 HT  staff   136 11 24 09:08 Repository</h4>
+<p>b表示block<br>
+d表示directory<br>
+l表示link<br>
+-表示一个可执行文件<br>
+####rwx(Owner)r-x(Group)r-x(Other)<br>
+使用者自己可读，可写，可执行;同一组的用户可读，不可写，可执行;其它用户可读，不可写，可执行。另外，有一些程序属性的执行部分不是x,而是s,这表示执行这个程序的使用者，临时可以有和拥有者一样权力的身份来执行该程序。<br>
+####-rwxr-xr-x  1 root root 4868 Mar 26 08:10 test<br>
+-表示为可执行文件，rwx(owner的权限),r-x(group的权限),r-x(临时使用者的权限)</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://localhost:4000/tag/R_okcaRzx" class="tag">
+                    unix
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://localhost:4000/post/堆和栈的区别">
+                  <h3 class="post-title">
+                    堆和栈的区别
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

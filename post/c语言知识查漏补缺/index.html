@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>c语言知识查漏补缺 | 坦吉</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1577511241262">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105219429"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105219429');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://localhost:4000">
+        <img src="http://localhost:4000/images/avatar.png?v=1577511241262" class="site-logo">
+        <h1 class="site-title">坦吉</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="http://localhost:4000/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/supertange" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://supertange.github.io" target="_blank">Gridea</a> | <a class="rss" href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">c语言知识查漏补缺</h2>
+            <div class="post-date">2017-01-12</div>
+            
+            <div class="post-content">
+              <p>c语言。。现在好多都搞忘了，补吧😂。</p>
+<blockquote>
+<p>printf(&quot;%5.2f&quot;,a);</p>
+</blockquote>
+<!--more-->
+<p>.2表示有两位小数(同0.2)<br>
+5表示占5个空位，不够的用空格补齐(左补齐)。</p>
+<blockquote>
+<p>printf(&quot;%-5.2f&quot;,a);</p>
+</blockquote>
+<p>即表示不够位置的右补齐。</p>
+<h3 id="数值常量">数值常量</h3>
+<p>八进制整形常量的开头是数字0，十六进制整形常量的数字开头是0x。c语言中的实例常量有两种表现形式小数形式，指数形式。<br>
+1. 小数形式<br>
+实例常量必须要有小数点<br>
+2. 指数形式<br>
+以&quot;e&quot;或&quot;E&quot;后跟一个整数来表示以10为底的幂指数并规定&quot;e&quot;或&quot;E&quot;前必须要有数字。<br>
+eg:</p>
+<blockquote>
+<p>.5e^-3  表示为0.5*10的-3次方<br>
+028 ❌ 0开头为八进制数但是第三位为8，不符合规范</p>
+</blockquote>
+<blockquote>
+<p>3.e^5 ❌e前面要有数字<br>
+4e^1.5 ❌e后面不是整数</p>
+</blockquote>
+<blockquote>
+<p>pow(x,y)  x表示底数，y表示指数<br>
+exp(x)  x表示e的多少次方</p>
+</blockquote>
+<p>abs 表示为整形的绝对值<br>
+fabs 表示浮点数的绝对值</p>
+<p>log(x)  表示lnx<br>
+log10(x) 即lgx<br>
+fmod取模(float)<br>
+mod 取模(整形)</p>
+<h3 id="逗号表达式">逗号表达式</h3>
+<p>逗号的优先级最低,等号的优先级也较低<br>
+<img src="/images/youxianji.png"><br>
+逗号表达式的格式是表达式1，表达式2，表达式3...表达式n</p>
+<p>逗号表达式的值等于最后一个表达式的值，各个表达式之间可以没联系。</p>
+<h4 id="位运算-与逻辑运算-区别">位运算（&amp;、|）与逻辑运算（&amp;&amp;、 || ）区别</h4>
+<p>#####位运算：<br>
+先将每个数转换成二进制，然后进行，位或（｜）表示相对应的每位至少有一个为1，则结果为1，只有两个都为0，结果才为0.位与(&amp;)表示相对应的两位必须都为1，结果才为1，否则为0。位异或（ ^ ）比较特殊，它比较的是如果两个不同则值为1（如：（1、0）（0、1）），相同（如：（1、1）（0、0））则为0。<br>
+#####逻辑运算:<br>
+&amp;&amp;为&quot;与&quot;,和的意思<br>
+||为&quot;或&quot;,或者的意思</p>
+<p>#####getcahr() 从输入设备读取字符到键盘缓冲区直到用户输入回车键(回车键也将放在缓冲区),getchar才从缓冲区读入个字符，回车既是确定也是一个字符<br>
+#####getchar与getch的区别：<br>
+getch直接从键盘中获取数值，而非到缓冲区读入数值，不等待用户按回车，只要用户按一个键，getch就立刻返回，getch返回值是用户输入的ascii码，出错返回-1，输入的字符不会显示在屏幕上<br>
+#####gets与scanf()区别<br>
+gets函数用来从标准输入设备（键盘）读取字符串<mark>直到换行符</mark>结束，但换行符会被丢弃，<mark>然后在末尾添加'\0'字符。<mark>🌿<br>
+其调用格式为：gets(s); 　　<br>
+其中s为字符串变量（字符串数组名或字符串指针）。 　　<br>
+gets(s)函数与scanf(&quot;%s:&quot;,&amp;s)/* scanf(&quot;%s&quot;,s) */相似，但不完全相同，使用scanf(&quot;%s&quot;,&amp;s);函数输入字符串时存在一个问题，就是如果输入了</mark>空格会认为字符串结束</mark>，<mark>空格后的字符将作为下一个输入项处理</mark>，但gets()函数将接收输入的整个字符串直到遇到<mark>换行</mark>为止。</p>
+<blockquote>
+<p>gets函数由于没有指定输入字符大小，所以会无限读取，一旦输入的字符大于数组长度，就会发生内存越界，</p>
+</blockquote>
+<p>从而造成程序崩溃或其他数据的错误。</p>
+<pre><code>原型  char *  fgets(char * s, int n,FILE *stream);
+
+参数：
+
+     s: 字符型指针，指向存储读入数据的缓冲区的地址。
+
+     n: 从流中读入n-1个字符
+
+
+     stream ： 指向读取的流。
+</code></pre>
+<p>列:</p>
+<blockquote>
+<p>fgets(s,10,stdin);只能读取9个数字<br>
+fputs(s,stdout);</p>
+</blockquote>
+<p>返回值：</p>
+<pre><code>      1. 当n&lt;=0 时返回NULL，即空指针。
+
+      2. 当n=1 时，返回空串&quot;&quot;.
+
+      3. 如果读入成功，则返回缓冲区的地址。
+
+      4. 如果读入错误或遇到文件结尾(EOF)，则返回NULL.
+</code></pre>
+<blockquote>
+<p>fgets只能读取N-1个字符，包括最后的'\n'，读完结束后系统将自动在最后加'\0'（gets读完结束后系统自动会将'\n'置换成'\0'）。</p>
+</blockquote>
+<p>如果输入的字符大于限定的大小-1，那么将会读取N-1个系统自动在最后加入一个\0，遇到下一个fgets将会把缓存中剩余的字符读取进去，直到遇到\n才会结束。</p>
+<p>详见<a href="http://www.cnblogs.com/aexin/p/3908003.html" >fgets与gets区别</a></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://localhost:4000/tag/cSzwzzCQQ" class="tag">
+                    c语言
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://localhost:4000/post/unix入门">
+                  <h3 class="post-title">
+                    unix入门
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

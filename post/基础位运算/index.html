@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>基础位运算 | 坦吉</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1577511241262">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105219429"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105219429');
+</script>
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://localhost:4000">
+        <img src="http://localhost:4000/images/avatar.png?v=1577511241262" class="site-logo">
+        <h1 class="site-title">坦吉</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="http://localhost:4000/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/supertange" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://supertange.github.io" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://supertange.github.io" target="_blank">Gridea</a> | <a class="rss" href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">基础位运算</h2>
+            <div class="post-date">2017-03-03</div>
+            
+            <div class="post-content">
+              <h2 id="位运算">位运算</h2>
+<h4 id="原码-反码-补码的运算">原码 反码 补码的运算</h4>
+<p>1.反码:正数的反码为本身,负数的反码第一位不变,其他位全部取反<!--more--><br>
+2.补码:真数的补码仍然是本身,负数的补码是在反码的基础上加一</p>
+<h4 id="基本的位运算">基本的位运算</h4>
+<ol>
+<li>&amp; 按位 与「AND」</li>
+</ol>
+<p>功能：对应的两个二进位 均为1 时，结果 为1，否则 为0</p>
+<p>例子：9&amp;5 = 1001&amp;0101 = 0001，即 9&amp;5=1</p>
+<p>*规律：二进制中与 1&amp; 保持原位，与  0&amp; 为0</p>
+<ol start="2">
+<li>| 按位 或「OR」</li>
+</ol>
+<p>功能：对应的两个二进位 只要有一个为1 时，结果 为1，否则 为0</p>
+<p>例子：9|5 = 1001|0101 = 1101，即 9|5=13</p>
+<ol start="3">
+<li>^ 按位 异或「XOR,EOR」</li>
+</ol>
+<p>功能：对应的两个二进位 不相同 为1，否则 为0</p>
+<p>例子：9^5 = 1001^0101 = 1100，即 9^5=12</p>
+<p>*规律：同一整数 相异或 为0，               例：5^5=0</p>
+<p>不同整数 相异或 结果和顺序无关，例：5<sup>6</sup>7 = 5<sup>7</sup>6</p>
+<p>任何数 和 0 异或 结果不变，        例：x^0 = x</p>
+<p>综上，x<sup>y</sup>x = x<sup>x</sup>y = 0^y = y</p>
+<ol start="4">
+<li>~ 按位 取反「NOR」</li>
+</ol>
+<p>功能：对整数的 每一位取反，符号也位取反「取反：0取反为1，1取反为0」</p>
+<p>例子：~9 = -10</p>
+<ol start="5">
+<li>&lt;&lt; 左移</li>
+</ol>
+<p>格式：整数&lt;&lt;左移个数</p>
+<p>例子：x &lt;&lt; n</p>
+<p>实质：x * 2n</p>
+<p>操作：把 x 的二进制位 向左移动 n 个单位，高位丢弃，低位补0</p>
+<ol start="6">
+<li>
+<blockquote>
+<blockquote>
+<p>右移</p>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<p>格式：整数&gt;&gt;右移个数</p>
+<p>例子：x &gt;&gt; n</p>
+<p>实质：x / 2n</p>
+<p>操作：把 x 的二进制位 向右移动 n 个单位，低位丢弃，符号位不变</p>
+<p>注意：符号位也跟着移动, 右移不改变整数的正负, 最后符号位要调整为原来的数值</p>
+<p>正数 符号位为 0, 最高位补0</p>
+<p>负数 符号位为 1, 最高位补1「取决于编译器的规定，这里以MAC的编译器为准」</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://localhost:4000/tag/cSzwzzCQQ" class="tag">
+                    c语言
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://localhost:4000/post/必须熟练排序方法">
+                  <h3 class="post-title">
+                    必须熟练排序方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
