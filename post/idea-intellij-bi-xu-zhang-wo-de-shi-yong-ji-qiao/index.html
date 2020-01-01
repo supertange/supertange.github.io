@@ -1,226 +1,726 @@
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>使用IDEA intellij 必须掌握的使用技巧！ | 坦吉</title>
-<meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1577513518069">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+      <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>坦吉</title>
+<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1577888969295">
 <link rel="stylesheet" href="https://supertange.github.io/styles/main.css">
+<meta name="description" content="温故而知新" />
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105219429-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-105219429-1');
-</script>
-
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://supertange.github.io">
-  <img class="avatar" src="https://supertange.github.io/images/avatar.png?v=1577513518069" alt="">
-  </a>
-  <h1 class="site-title">
-    坦吉
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div class="head-top-line"></div>
+    <div class="header-box">
       
-        <a href="/" class="menu">
-          首页
+<header class="header">
+  <div class="blog-header" id="header">
+    <div class="site-meta">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-title">
+        <a href="/" class="brand">
+          <span>坦吉</span>
         </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+      </div>
+      <p class="subtitle">Quick notes</p>
+    </div>
+    <nav class="site-nav" id="site_nav">
+      <ul id="nav_ul">
+        
+          <li class="nav-item ">
+            
+              <a href="/">
+                <i class="fa fa-home"></i> 首页
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/archives">
+                <i class="fa fa-archive"></i> 归档
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/tags">
+                <i class="fa fa-tags"></i> 标签
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/post/about">
+                <i class="fa fa-info-circle"></i> 关于
+              </a>
+            
+          </li>
+        
+        <li class="nav-item">
+          <a>
+            <i class="fa fa-search"></i> 搜索
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <div class="social-container">
-    
+</header>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      <div class="section-layout">
+        <div class="section-layout-wrapper">
+          
+<div class="sidebar">
+    <div class="sidebar-wrapper" id="sidebar">
       
-        <a href="https://github.com/supertange" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
       
-    
-      
-        <a href="https://github.com/supertange" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      
-    
-      
-        <a href="https://github.com/supertange" target="_blank">
-          <i class="fab fa-weibo"></i>
-        </a>
-      
-    
-      
-    
-      
-    
+      <div class="sidebar-body" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            <div class="sidebar-wrapper">
+  <div class="sidebar-item">
+    <img class="site-author-image" src="https://supertange.github.io/images/avatar.png"/>
+    <p class="site-author-name">坦吉</p>
+    <p class="site-description">温故而知新</p>
+  </div>
+  <div class="sidebar-item side-item-stat">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">12</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">6</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  <div class="sidebar-item">
+    <span class="site-item-rss">
+        <i class="fa fa-rss"></i>
+        <a href="https://supertange.github.io/atom.xml" target="_blank">RSS</a>
+    </span>
+  </div>
+  <div class="sidebar-item sidebar-item-social">
+    <div class="social-item">
+      <a href="">
+        <i class="fa fa-github"></i> GitHub
+      </a>
+      <a href="">
+        <i class="fa fa-twitter"></i> Twitter
+      </a>
+    </div>
+    <div class="social-item">
+      <a href="">
+        <i class="fa fa-globe"></i> 豆瓣
+      </a>
+      <a href="">
+        <i class="fa fa-globe"></i> 知乎
+      </a>
+    </div>
   </div>
 </div>
-
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              使用IDEA intellij 必须掌握的使用技巧！
-            </h2>
-            <div class="post-info">
-              <span>
-                2019-12-24
-              </span>
-              <span>
-                2 min read
-              </span>
-              
-                <a href="https://supertange.github.io/tag/pmF56ga2-" class="post-tag">
-                  # idea
-                </a>
-              
-            </div>
-            
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <h1 id="工欲善其事必先利其器">工欲善其事，必先利其器。</h1>
-<h2 id="必备插件安装">必备插件安装</h2>
-<ol>
-<li>representation assistant</li>
-<li>fas</li>
-</ol>
-<h3 id="search-everywhere">Search Everywhere</h3>
-<p><code>https://www.jetbrains.com/help/idea/searching-everywhere.html</code><br>
-set keymap type: <strong>Mac OS 10.5+</strong><br>
-cmd + o   class类查找<br>
-cmd + shift + o  file文件查找<br>
-cmd + alt + o symbols特征查找; filter能按路径查找“／”</p>
-<h4 id="press-shift-twice-to-open-the-search-windowyou-can-search-everywhere-you-know-include-class-files-symbols-and-actionspress-double-shift-again-idea-will-select-or-unselect-the-include-non-project-itemscheckbox">press <strong>shift</strong> twice to open the search window,you can search everywhere you know. (include class files symbols and actions).Press double <strong>shift</strong> again, Idea will select or unselect the <strong>Include non-project items</strong>checkbox.</h4>
-<h4 id="start-typing-your-queryidea-lists-the-results-dividing-them-into-sections-where-your-query-is-found-press-cmd-up-or-down-to-jump-between-sectionsand-you-can-press-tab-to-switch-the-scope-of-your-search-to-classes-files-symbols-or-actions">start typing your query,IDEA lists the results dividing them into sections where your query is found. press <strong>cmd + up or down</strong> to jump between sections.And you can press <strong>tab</strong> to switch the scope of your search to classes files symbols or actions.</h4>
-<h4 id="press-alt-up-or-down-to-switch-history">press <strong>alt + up or down</strong> to switch history.</h4>
-<h4 id="you-can-input-everything-also-example-serviceredisservicelget-scope-of-symbols-so-you-are-not-have-to-rely-on-mouse-so-much-now">you can input everything ,also example: <strong>service.redisservice.lget</strong>  -scope of symbols.  So you are not have to rely on mouse so much now.</h4>
-<h4 id="cmd-e-is-your-friend-commandthen-idea-will-lists-recent-filese-presents-edited-files"><strong>cmd + E</strong> is your friend command.Then idea will lists recent files.(E presents Edited files)</h4>
-<h4 id="to-navigate-backwards-press-to-navigate-forward-press">To navigate backwards, press <strong>⌘[</strong>. To navigate forward, press <strong>⌘]</strong>.</h4>
-<h4 id="to-navigate-to-the-last-edited-location-press">To navigate to the last edited location, press <strong>⇧⌘⌫</strong>.</h4>
-
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li><a href="#%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8">工欲善其事，必先利其器。</a>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box">
+  <div class="toc-wrapper" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8">工欲善其事，必先利其器</a>
 <ul>
-<li><a href="#%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85">必备插件安装</a>
-<ul>
+<li><a href="#prerequisite-plugins">Prerequisite plugins</a></li>
 <li><a href="#search-everywhere">Search Everywhere</a>
 <ul>
-<li><a href="#press-shift-twice-to-open-the-search-windowyou-can-search-everywhere-you-know-include-class-files-symbols-and-actionspress-double-shift-again-idea-will-select-or-unselect-the-include-non-project-itemscheckbox">press <strong>shift</strong> twice to open the search window,you can search everywhere you know. (include class files symbols and actions).Press double <strong>shift</strong> again, Idea will select or unselect the <strong>Include non-project items</strong>checkbox.</a></li>
-<li><a href="#start-typing-your-queryidea-lists-the-results-dividing-them-into-sections-where-your-query-is-found-press-cmd-up-or-down-to-jump-between-sectionsand-you-can-press-tab-to-switch-the-scope-of-your-search-to-classes-files-symbols-or-actions">start typing your query,IDEA lists the results dividing them into sections where your query is found. press <strong>cmd + up or down</strong> to jump between sections.And you can press <strong>tab</strong> to switch the scope of your search to classes files symbols or actions.</a></li>
-<li><a href="#press-alt-up-or-down-to-switch-history">press <strong>alt + up or down</strong> to switch history.</a></li>
-<li><a href="#you-can-input-everything-also-example-serviceredisservicelget-scope-of-symbols-so-you-are-not-have-to-rely-on-mouse-so-much-now">you can input everything ,also example: <strong>service.redisservice.lget</strong>  -scope of symbols.  So you are not have to rely on mouse so much now.</a></li>
-<li><a href="#cmd-e-is-your-friend-commandthen-idea-will-lists-recent-filese-presents-edited-files"><strong>cmd + E</strong> is your friend command.Then idea will lists recent files.(E presents Edited files)</a></li>
-<li><a href="#to-navigate-backwards-press-to-navigate-forward-press">To navigate backwards, press <strong>⌘[</strong>. To navigate forward, press <strong>⌘]</strong>.</a></li>
-<li><a href="#to-navigate-to-the-last-edited-location-press">To navigate to the last edited location, press <strong>⇧⌘⌫</strong>.</a></li>
+<li><a href="#started">Started</a></li>
+<li><a href="#basis">basis</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li><a href="#away-from-your-mouse">Away from your mouse</a></li>
+<li><a href="#hide-all-the-windows">Hide All The Windows</a></li>
+<li><a href="#some-tips">Some Tips</a></li>
 </ul>
 </li>
 </ul>
 
-              </div>
-            </div>
-          </article>
-        </div>
-
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">
-              <h3 class="post-title">
-                用「zsh」 「oh my zsh」「powerlevel10k」打造属于你的终端环境(Mac)
-              </h3>
-            </a>
-          </div>
-        
-
-        
-
-        <div class="site-footer">
-  Powered by Tange | 
-  <a class="rss" href="https://supertange.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
 </div>
 
 <script>
-  hljs.initHighlightingOnLoad()
 
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
 
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
 
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        cur.text =  deep + ' ' + cur.text;
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
       }
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.body.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
   });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+
+    if (hList.length > 10) {
+      active = 'active-hidden'
+      tocContent.classList.add('closed');
+    } else {
+      tocContent.classList.add('expanded');
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
 
 </script>
-
+          </div>
+        
       </div>
     </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+  let hasFix = false;
+  window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+</script>
+          <div class="section-box">
+            <div class="section post">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
+      使用IDEA intellij 必须掌握的使用技巧！
+    </a>
+  </h1>
+  <div class="post-meta">
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2019-12-24</span>
+    </span>
+    
+      <span class="meta-item">
+        <span class="post-meta-divider pc-show">|</span>
+        <i class="fa fa-folder-o"></i>
+        <span class="pc-show">分类于</span>
+        
+          
+            <a href="https://supertange.github.io/tag/pmF56ga2-">
+              <span>idea</span>
+            </a>
+          
+        
+      </span>
+    
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-clock-o"></i>
+      <span>6分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>836<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <h1 id="工欲善其事必先利其器">工欲善其事，必先利其器</h1>
+<h2 id="prerequisite-plugins">Prerequisite plugins</h2>
+<ol>
+<li>
+<p>representation assistant</p>
+<p>This plugin is a great and useful tool; It shows name and Win/Mac shortcuts of  any action you invokes.</p>
+</li>
+<li>
+<p>Key promoter X</p>
+<p>The plugin helps you to learn essential shortcuts while you are working. When you use the mouse on a button inside the IDE, the plugin shows you the keyboard shortcut that you should have instead.</p>
+</li>
+</ol>
+<h2 id="search-everywhere">Search Everywhere</h2>
+<pre><code class="language-html">https://www.jetbrains.com/help/idea/searching-everywhere.html
+</code></pre>
+<h3 id="started">Started</h3>
+<p>​	<strong>First</strong>, set keymap type: <strong>Mac OS 10.5+</strong></p>
+<ol>
+<li>
+<p>Press <code>⇧</code> twice to open the search window, you can search everywhere you know. (include class files symbols and actions). Press double <code>⇧</code> again,  IDEA will select or unselect the <strong>Include non-project items</strong> checkbox.</p>
+</li>
+<li>
+<p>Start typing your query, IDEA lists the results dividing them into sections where your query is found. press <code>⌘↑</code> or <code>⌘↓</code> to jump between sections. And you can press <code>⇥</code> to switch the scope of your search to classes files symbols or actions.</p>
+<p>You can use the following shortcuts to open the search window the needed scope right from the start.</p>
+<ul>
+<li><code>⌘O</code>: finds a <strong>class</strong> by name</li>
+<li><code>⇧⌘O</code>: finds any <strong>file</strong> or <strong>directory</strong> by name</li>
+<li><code>⌥⌘O</code>: finds symbol; Also you can search like  <code>/**/**</code></li>
+<li><code>⇧⌘A</code>: finds an action by name.</li>
+</ul>
+</li>
+<li>
+<p>Press <code>⌥↑</code> or ``⌥↓` to switch history you searched.</p>
+</li>
+</ol>
+<h3 id="basis">basis</h3>
+<ol>
+<li>
+<p><strong>Search for settings</strong></p>
+<p>Press <code>⇧</code> twice to open thie search window and type <code>/</code>. IDEA lists the available groups of setting. Then press <code>Enter</code> to select the options.</p>
+</li>
+<li>
+<p><strong>Search for actions</strong></p>
+<ol>
+<li>Press ⇧ twice to open the search window.</li>
+<li>In the search field, type, for example, <code>Push</code>.</li>
+<li>IDEA displays the <code>Push</code> action in the <strong>Action</strong> section together with its shortcut.</li>
+</ol>
+</li>
+<li>
+<p><strong>Search for abbreviations</strong></p>
+<p>​	You alse can assign a short code for the action and use it to search for such action and qiuckly access it, For example, assign an abbreviation for <em>Color Picker</em></p>
+<ol>
+<li>
+<p>In the <strong>Settings/Preferences</strong> dialog <code>⌘,</code>, go to <strong>Keymap</strong>. From the options on the right select Other|Show color Picker.</p>
+</li>
+<li>
+<p>From the context menu, select <strong>Add Abbreviation</strong></p>
+</li>
+<li>
+<p>In the dialog that opens, specify the abbbreviation you are going to use, for example <strong>cp</strong> and click ok.</p>
+</li>
+<li>
+<p>When you type cp in the search field ,IDEA will display the item to which you have assigned your abbreviation. Press <code>⏎</code> to access the  <strong>Color Picker</strong> dialog.</p>
+</li>
+</ol>
+<p>you can input everything ,also example: <strong>service.redisservice.lget</strong>  -- scope of symbols.  So you are not have to rely on mouse so much now.</p>
+</li>
+</ol>
+<h2 id="away-from-your-mouse">Away from your mouse</h2>
+<ol>
+<li><code>⌘E</code>  is your friend command. Then idea will lists recent files after pressing. ( <code>E</code> presents Edited files here)</li>
+<li><code>⌘⇧E</code>: shows the recent locations.</li>
+<li><code>⌘1</code>: shows your <strong>project</strong>; Press twice to close the sidebar.</li>
+<li><code>←</code> : select parent node when your cursor on the <strong>project</strong>.</li>
+<li><code>→</code> :  select child node when your cursor on the <strong>project</strong>.</li>
+<li><code>Enter</code>: display the code where your cursor are.</li>
+<li><code>⌘↓</code>: jump to the code where your cursor are.</li>
+<li><code>⌘N</code>: create new file. Example create directory <code>aa/aaa/aaa/aa</code>.</li>
+<li></li>
+<li><code>⌘+F12</code>: shows <strong>file structure</strong>. Press twice also to show the Inherited members.</li>
+<li><code>⌘[</code>: To navigate backwards, press.</li>
+<li><code>⌘]</code>: To navigate forward, press.</li>
+<li><code>⌘⇧⌫</code>: To navigate to the last edited location, press .</li>
+<li><code>⌘,</code>:  shows the <strong>Settings/Preferences</strong> dialog.</li>
+<li><code>⌘B</code>: shows the class where declarations are.</li>
+<li><code>⌘⌥B</code>: show all the implements.</li>
+<li><code>⌘U</code>: <strong>go to the super class</strong></li>
+<li><code>^H</code>:  shows the Type Hierarchy</li>
+</ol>
+<h2 id="hide-all-the-windows">Hide All The Windows</h2>
+<ol>
+<li>
+<p>You can hide all the windows with a <strong>qiuck</strong> shortcut <code>⌘⇧F12</code>. You can also do is enter what called distriction-free.</p>
+</li>
+<li>
+<p>Hiden the navigation bar, if you ever want it. You just invoke it via <code>⌘↑</code></p>
+</li>
+<li>
+<p>You can resize windows without using the mouse via <code>⌘⇧→</code> or <code>⌘⇧←</code>.</p>
+</li>
+<li>
+<p>Press <code>⌥↓</code> or <code>⌥↑</code> to select code. Select  the method and then the class and then the entire outer class and then the entire package or shrink this as well.</p>
+<ol>
+<li><code>⌥↓</code>: shrink selection.</li>
+<li><code>⌥↑</code>: extend selection.</li>
+</ol>
+</li>
+<li>
+<p>Place the cusor on an entire line, if you wan to move code you just pres <code>⇧⌥↑</code> or <code>⇧⌥↑</code></p>
+<ol>
+<li><code>⌥⇧↓</code>: move ling up.</li>
+<li><code>⌥⇧↑</code>: move line down.</li>
+</ol>
+</li>
+<li>
+<p><code>⌘D</code>: duplicate line.</p>
+</li>
+<li>
+<p><code>^G</code>: via press many times to place  <strong>multiple cursors to select the words</strong>.</p>
+</li>
+<li>
+<p><code>^⌘G</code>: select all occurred words.</p>
+</li>
+<li>
+<p>If  wan to clean up code, you just select this code and hit <code>^⌥I</code>. Or you wan to clean up entire code ,so just search <strong>clean up</strong> in <strong>Search Everywhere</strong>(hit twice <code>⇧</code>).</p>
+</li>
+</ol>
+<h2 id="some-tips">Some Tips</h2>
+<ol>
+<li>Edit JSON ----use <u>language injection</u>
+<ol>
+<li>Press <code>⌥+Enter</code>  and select <strong>inject language</strong>  and select <strong>JSON</strong>, then IDEA interprets it as JSON and  press  <code>⌥+Enter</code>  and select <strong>Edit JSON fragment</strong> . Also on <strong>regExp</strong>,<strong>html</strong>,js,ect.</li>
+</ol>
+</li>
+<li><code>⌘J</code>: insert live templates; example <strong>sout</strong> ,<strong>psvm</strong> ,ect. You also can create yourself template ,example <strong>try/catch</strong> act.</li>
+<li>``⌘⇧+Enter`: Complete Current statement.</li>
+<li>if you don't doing extra <strong>library or files</strong>  supported for javascript with the nodeJs plugin, you can press <code>⌘,</code> to open the setting dialog and then to search &quot;library &quot; to unchecked the nodeJs plugin.</li>
+<li>If hate the inspection of IDEA, you can change the inspection into another one you like.</li>
+<li>check inspection: <strong>Search Everywhere</strong> -&gt; run inspection -&gt; you want to check</li>
+<li><code>⌘F2</code>:  NextHighlighted Error.</li>
+<li><code>⌘⇧F2</code>:  PreHighlighted Error.</li>
+<li>analyse dependency matrix.</li>
+<li>&quot;<strong>^`</strong>&quot;: quick switch scheme.</li>
+</ol>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      坦吉
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao" title="使用IDEA intellij 必须掌握的使用技巧！">https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外,转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+      <a href="https://supertange.github.io/tag/pmF56ga2-"># idea</a>
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">用「zsh」 「oh my zsh」「powerlevel10k」打造属于你的终端环境(Mac)</a>
+        <a class="nav-mobile-next" href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
+      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+    </div>
+  </footer>
+  <div class="back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    <span class="scrollpercent">
+      <span id="back_to_top_text">100</span>%
+    </span>
+  </div>
+</div>
+
+<script>
+
+  let body = document.body;
+
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(body.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = body.scrollTop / (body.scrollHeight - body.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    back2TopText.textContent = Math.floor(percent);
+  });
+
+  // 动态调整站点概览高度
+  let sideBar = document.querySelector('.sidebar');
+  let navUl = document.querySelector('#nav_ul');
+  sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+</script>
+    </div>
   </body>
+  <script src="/media/js/motion.js"></script>
 </html>

@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>坦吉</title>
-    <updated>2019-12-28T06:12:21.448Z</updated>
+    <updated>2020-01-01T14:30:30.803Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://supertange.github.io/images/avatar.png</logo>
     <icon>https://supertange.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 坦吉</rights>
+    <rights>All rights reserved 2020, 坦吉</rights>
     <entry>
         <title type="html"><![CDATA[使用IDEA intellij 必须掌握的使用技巧！]]></title>
         <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
