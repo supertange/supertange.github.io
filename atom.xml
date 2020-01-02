@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>坦吉</title>
-    <updated>2020-01-01T14:34:30.313Z</updated>
+    <updated>2020-01-02T03:32:17.625Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -11,35 +11,47 @@
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 坦吉</rights>
     <entry>
-        <title type="html"><![CDATA[使用IDEA intellij 必须掌握的使用技巧！]]></title>
+        <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧]]></title>
         <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
         <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
         </link>
         <updated>2019-12-24T08:43:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>把工具熟练好，工作起来才会得心应手，事半功倍。大名鼎鼎的intelliJ IDEA功能强大，对于JAVA开发者而言更是利器，熟练地使用IDEA必然是重中之重。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>把工具熟练好，工作起来才会得心应手，事半功倍。大名鼎鼎的intelliJ IDEA功能强大，对于JAVA开发者而言更是利器，熟练地使用IDEA必然是重中之重。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[用「zsh」 「oh my zsh」「powerlevel10k」打造属于你的终端环境]]></title>
+        <title type="html"><![CDATA[打造Premium Terminal ——「 zsh, oh my zsh, powerlevel10k 」]]></title>
         <id>https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac</id>
         <link href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">
         </link>
         <updated>2019-12-24T06:18:35.000Z</updated>
+        <summary type="html"><![CDATA[<p>很 nice 的一个终端。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>很 nice 的一个终端。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[基础位运算]]></title>
+        <title type="html"><![CDATA[C语言 —— 基础位运算]]></title>
         <id>https://supertange.github.io/post/基础位运算</id>
         <link href="https://supertange.github.io/post/基础位运算">
         </link>
         <updated>2017-03-03T13:53:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[必须熟练排序方法]]></title>
+        <title type="html"><![CDATA[数据结构与算法 —— 应掌握的排序算法]]></title>
         <id>https://supertange.github.io/post/必须熟练排序方法</id>
         <link href="https://supertange.github.io/post/必须熟练排序方法">
         </link>
         <updated>2017-02-11T12:47:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>如题</p>
+        <summary type="html"><![CDATA[<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>如题</p>
+        <content type="html"><![CDATA[<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
 ]]></content>
     </entry>
     <entry>
