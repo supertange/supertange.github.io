@@ -180,13 +180,44 @@
             <div class="toc-box">
   <div class="toc-wrapper" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#%E5%9F%BA%E7%A1%80%E4%BD%8D%E8%BF%90%E7%AE%97">基础位运算</a>
+<li><a href="#%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%E5%BF%85%E5%85%88%E5%88%A9%E5%85%B6%E5%99%A8idea%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7-2">工欲善其事，必先利其器——IDEA使用技巧 2</a>
 <ul>
-<li><a href="#%E4%BD%8D%E8%BF%90%E7%AE%97">位运算</a><br>
-*
+<li><a href="#%E9%AB%98%E6%95%88%E5%AE%9A%E4%BD%8D%E4%BB%A3%E7%A0%81">高效定位代码</a>
 <ul>
-<li><a href="#%E5%8E%9F%E7%A0%81-%E5%8F%8D%E7%A0%81-%E8%A1%A5%E7%A0%81%E7%9A%84%E8%BF%90%E7%AE%97">原码 反码 补码的运算</a></li>
-<li><a href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E4%BD%8D%E8%BF%90%E7%AE%97">基本的位运算</a></li>
+<li><a href="#%E6%97%A0%E5%A4%84%E4%B8%8D%E5%9C%A8%E7%9A%84%E8%B7%B3%E8%BD%AC">无处不在的跳转</a>
+<ul>
+<li><a href="#%E9%A1%B9%E7%9B%AE%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%B3%E8%BD%AC%E5%A4%9A%E4%B8%AA%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%B3%E8%BD%AC">项目之间的跳转(多个窗口之间的跳转)</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E8%B7%B3%E8%BD%AC">文件之间的跳转</a></li>
+<li><a href="#%E6%B5%8F%E8%A7%88%E6%96%87%E4%BB%B6%E9%97%B4%E7%9A%84%E8%B7%B3%E8%BD%AC">浏览文件间的跳转</a></li>
+<li><a href="#%E5%88%A9%E7%94%A8%E4%B9%A6%E7%AD%BE%E8%B7%B3%E8%BD%ACbookmark-%E8%BE%83%E4%B8%BA%E5%B8%B8%E7%94%A8%E5%9C%A8u%E6%B5%8F%E8%A7%88%E4%BB%A3%E7%A0%81u%E6%97%B6">利用书签跳转(bookmark) --较为常用在<u>浏览代码</u>时</a></li>
+<li><a href="#%E6%94%B6%E8%97%8F%E4%BD%8D%E7%BD%AE%E5%92%8C%E6%96%87%E4%BB%B6">收藏位置和文件</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91%E5%8C%BA%E5%92%8C%E6%96%87%E4%BB%B6%E5%8C%BA%E7%9A%84%E8%B7%B3%E8%BD%AC">编辑区和文件区的跳转</a></li>
+</ul>
+</li>
+<li><a href="#%E7%B2%BE%E5%87%86%E6%90%9C%E7%B4%A2">精准搜索</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%B0%8F%E5%8A%A9%E6%89%8B">代码小助手</a>
+<ul>
+<li><a href="#%E7%BC%96%E5%86%99%E9%AB%98%E8%B4%A8%E9%87%8F%E4%BB%A3%E7%A0%81-refactor%E9%87%8D%E6%9E%84">编写高质量代码 -- refactor(重构)</a></li>
+</ul>
+</li>
+<li><a href="#git%E7%9A%84%E4%BD%BF%E7%94%A8-%E4%BB%A5%E4%B8%8B%E5%9D%87%E4%B8%BAgit%E7%9A%84%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4">Git的使用----以下均为git的操作命令</a>
+<ul>
+<li><a href="#git%E7%9A%84%E9%9B%86%E6%88%90">Git的集成</a></li>
+<li><a href="#local-history-%E6%8C%BA%E9%87%8D%E8%A6%81%E7%9A%84">local history----挺重要的</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B3%E8%81%94%E4%B8%80%E5%88%87">关联一切</a></li>
+<li><a href="#%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95">断点调试</a>
+<ul>
+<li><a href="#%E5%9F%BA%E7%A1%80">基础</a></li>
+<li><a href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%B1%82%E5%80%BCevaluate-expression">表达式求值(evaluate expression)</a></li>
+<li><a href="#%E8%B7%B3%E5%88%B0%E6%8C%87%E5%AE%9A%E8%A1%8C">跳到指定行</a></li>
+<li><a href="#setvalue">setValue</a></li>
+</ul>
+</li>
+<li><a href="#debug">debug</a></li>
+<li><a href="#%E7%BB%93%E6%9E%84%E5%9B%BE">结构图</a></li>
+<li><a href="#%E6%89%80%E6%9C%89%E7%B1%BB-pom%E9%83%BD%E5%8F%AF%E4%BD%BF%E7%94%A8%E5%A4%A7%E7%BA%B2%E8%A7%86%E5%9B%BE">所有类 pom都可使用大纲视图</a></li>
 </ul>
 </li>
 </ul>
@@ -429,102 +460,259 @@ window.addEventListener('load', function() {
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://supertange.github.io/post/基础位运算">
-      C语言 —— 基础位运算
+    <a class="post-title-link" href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2">
+      工欲善其事，必先利其器——IDEA使用技巧 2
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2017-03-03</span>
+      <span>2020-01-02</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://supertange.github.io/tag/cSzwzzCQQ">
-              <span>c语言</span>
-            </a>
-          
-        
-      </span>
     
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>486<span class="pc-show">字数</span></span>
+      <span>1005<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>原码，反码，补码的运算。</p>
+                <p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
 <!-- more -->
-<h1 id="基础位运算">基础位运算</h1>
-<h2 id="位运算">位运算</h2>
-<h4 id="原码-反码-补码的运算">原码 反码 补码的运算</h4>
+<h1 id="工欲善其事必先利其器idea使用技巧-2">工欲善其事，必先利其器——IDEA使用技巧 2</h1>
+<h2 id="高效定位代码">高效定位代码</h2>
+<blockquote>
+<p>注：此次示例使用的 <strong>keymap type</strong> 为 <strong>Mac OS 10.5+</strong> , 若不明白请翻看上一篇IDEA的文章。<br>
+​		 若按键不一一对应，请使用<strong>Search Everywhere</strong>，按名字搜索即可展示出快捷键。</p>
+</blockquote>
+<h3 id="无处不在的跳转">无处不在的跳转</h3>
+<h4 id="项目之间的跳转多个窗口之间的跳转">项目之间的跳转(多个窗口之间的跳转)</h4>
 <ol>
-<li>反码:正数的反码为本身,负数的反码第一位不变,其他位全部取反</li>
-<li>补码:真数的补码仍然是本身,负数的补码是在反码的基础上加一</li>
-</ol>
-<h4 id="基本的位运算">基本的位运算</h4>
-<ol>
-<li>&amp; 按位 与「AND」</li>
-</ol>
-<p>功能：对应的两个二进位 均为1 时，结果 为1，否则 为0</p>
-<p>例子：9&amp;5 = 1001&amp;0101 = 0001，即 9&amp;5=1</p>
-<p>*规律：二进制中与 1&amp; 保持原位，与  0&amp; 为0</p>
-<ol start="2">
-<li>| 按位 或「OR」</li>
-</ol>
-<p>功能：对应的两个二进位 只要有一个为1 时，结果 为1，否则 为0</p>
-<p>例子：9|5 = 1001|0101 = 1101，即 9|5=13</p>
-<ol start="3">
-<li>^ 按位 异或「XOR,EOR」</li>
-</ol>
-<p>功能：对应的两个二进位 不相同 为1，否则 为0</p>
-<p>例子：9^5 = 1001^0101 = 1100，即 9^5=12</p>
-<p>*规律：同一整数 相异或 为0，               例：5^5=0</p>
-<p>不同整数 相异或 结果和顺序无关，例：5<sup>6</sup>7 = 5<sup>7</sup>6</p>
-<p>任何数 和 0 异或 结果不变，        例：x^0 = x</p>
-<p>综上，x<sup>y</sup>x = x<sup>x</sup>y = 0^y = y</p>
-<ol start="4">
-<li>~ 按位 取反「NOR」</li>
-</ol>
-<p>功能：对整数的 每一位取反，符号也位取反「取反：0取反为1，1取反为0」</p>
-<p>例子：~9 = -10</p>
-<ol start="5">
-<li>&lt;&lt; 左移</li>
-</ol>
-<p>格式：整数&lt;&lt;左移个数</p>
-<p>例子：x &lt;&lt; n</p>
-<p>实质：x * 2n</p>
-<p>操作：把 x 的二进制位 向左移动 n 个单位，高位丢弃，低位补0</p>
-<ol start="6">
 <li>
-<blockquote>
-<blockquote>
-<p>右移</p>
-</blockquote>
-</blockquote>
+<p><code>alt+ cmd + ]</code>:  Next Project Window</p>
+</li>
+<li>
+<p><code>alt+ cmd + ]</code>: Prevoius Project Window</p>
 </li>
 </ol>
-<p>格式：整数&gt;&gt;右移个数</p>
-<p>例子：x &gt;&gt; n</p>
-<p>实质：x / 2n</p>
-<p>操作：把 x 的二进制位 向右移动 n 个单位，低位丢弃，符号位不变</p>
-<p>注意：符号位也跟着移动, 右移不改变整数的正负, 最后符号位要调整为原来的数值</p>
-<p>正数 符号位为 0, 最高位补0</p>
-<p>负数 符号位为 1, 最高位补1「取决于编译器的规定，这里以MAC的编译器为准」</p>
+<h4 id="文件之间的跳转">文件之间的跳转</h4>
+<ol>
+<li><code>cmd+E</code>: Recent Files.</li>
+<li><code>cmd+alt+E</code>: rencent location.</li>
+<li><code>cmd+ shift + Del</code>: last edit location.</li>
+<li><code>ctl+ shift + Del</code>: next edit location.</li>
+</ol>
+<h4 id="浏览文件间的跳转">浏览文件间的跳转</h4>
+<ol>
+<li><code>cmd+[</code>： back</li>
+<li><code>cmd+[</code>： forward</li>
+</ol>
+<h4 id="利用书签跳转bookmark-较为常用在u浏览代码u时">利用书签跳转(bookmark) --较为常用在<u>浏览代码</u>时</h4>
+<ol>
+<li><code>F3</code>: toggle book, 标记书签</li>
+<li><code>alt + F3</code>: 帮助记忆标记书签，打好书签后，按<code>ctl+1/2/3/4...</code>就可以跳转你所打的标签位置。</li>
+<li><code>cmd + F3</code>: show all bookmarks.</li>
+</ol>
+<h4 id="收藏位置和文件">收藏位置和文件</h4>
+<p><u>认为写的好的代码 可以收藏</u></p>
+<ol>
+<li><code>cmd+ alt+ F</code>: 添加到到<strong>收藏夹</strong></li>
+</ol>
+<h4 id="编辑区和文件区的跳转">编辑区和文件区的跳转</h4>
+<ol>
+<li><code>cmd+1</code>: 跳转文件区</li>
+<li><code>esc</code>： 回到编辑区</li>
+</ol>
+<h3 id="精准搜索">精准搜索</h3>
+<ol>
+<li>class</li>
+<li>files</li>
+<li>setting</li>
+<li>action</li>
+<li>symbol</li>
+</ol>
+<blockquote>
+<p>以上的几个搜索在上篇idea文章中，已经介绍。</p>
+</blockquote>
+<p>补充：符号搜索</p>
+<ol>
+<li><code>cmd+shift+F</code>: Find in path.</li>
+</ol>
+<h3 id="代码小助手">代码小助手</h3>
+<ol>
+<li>
+<p>列操作</p>
+<p><code>^+cmd+G</code>： 选中所有(当前的选中的)一样的字符</p>
+</li>
+<li>
+<p>live template</p>
+<p><code>cmd+ shift + O</code>-&gt; search <strong>live template</strong>--&gt;create template group--&gt;create my template .</p>
+<p>example:</p>
+<p>abbreviation : main</p>
+<p>template text:</p>
+<pre><code class="language-java">public static void main(){
+    $END$
+}
+</code></pre>
+<p>常用的<strong>live template</strong> ：</p>
+<ol>
+<li>
+<p>main: public static void main</p>
+<pre><code class="language-java">public static void main(){
+    $END$
+}
+</code></pre>
+</li>
+<li>
+<p>psfi: public static  final int</p>
+<pre><code class="language-java">public static  final int $var1$ = $var2$;
+</code></pre>
+</li>
+<li>
+<p>psfs</p>
+<pre><code class="language-java">public static final  String $var1$ = $var2$;
+</code></pre>
+</li>
+<li>
+<p>psc: private String  c代表有注释</p>
+<pre><code class="language-java">/**
+ * $var1$
+ */
+private String $var2$;
+
+$END$
+</code></pre>
+</li>
+<li>
+<p>ps：private String</p>
+<pre><code class="language-java">private String $var2$;
+
+$END$
+</code></pre>
+</li>
+<li>
+<p>pic：private int c代表有注释</p>
+<pre><code class="language-java">/**
+ * $var1$
+ */
+private int $var2$;
+
+$END$
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>postfix -后缀函数</p>
+<blockquote>
+<p>for sout field return nn(not null)</p>
+</blockquote>
+</li>
+<li>
+<p>alt+enter</p>
+<ol>
+<li>自动创建函数</li>
+<li>Replace, 自动更优的方式来替换你的代码</li>
+<li>智能format build</li>
+<li>智能实现接口----implement interface</li>
+<li>智能单词拼写</li>
+<li>智能导包</li>
+</ol>
+</li>
+</ol>
+<h4 id="编写高质量代码-refactor重构">编写高质量代码 -- refactor(重构)</h4>
+<ol>
+<li>
+<p><strong>重构</strong></p>
+<p><code>shift+F6</code>: ，只要作用域内名字相同的变量名都同时改变。</p>
+</li>
+<li>
+<p>抽取(extract)</p>
+<p><code>cmd+alt+v</code>: 将选中抽取为变量</p>
+</li>
+<li>
+<p>抽取为静态变量(extract)</p>
+<p><code>cmd+alt+ c</code>: 抽取为静态常量</p>
+</li>
+<li>
+<p>抽取方法参数</p>
+<p><code>cmd+alt+p</code>: 抽取为方法参数，方便将方法独立出来。(parameters)</p>
+</li>
+<li>
+<p>抽取为函数</p>
+<p><code>cmd+alt+m</code>: 抽取为函数  m-&gt;method</p>
+</li>
+</ol>
+<h3 id="git的使用-以下均为git的操作命令">Git的使用----以下均为git的操作命令</h3>
+<h4 id="git的集成">Git的集成</h4>
+<ol>
+<li>
+<p>打开git的代码注释(可以看到每行代码是谁写的)</p>
+<p>Search Everywhere --&gt; annotate(git的) --&gt; switch on</p>
+</li>
+<li>
+<p><code>cmd+ shift+ ^ + ↑</code>: previous change</p>
+</li>
+<li>
+<p><code>cmd+ shift+ ^ + ↓</code>: previous change</p>
+</li>
+<li>
+<p><code>alt + cmd + z</code>: 撤销选中的代码，package，class.....</p>
+</li>
+</ol>
+<h4 id="local-history-挺重要的">local history----挺重要的</h4>
+<ol>
+<li>查看本地的修改记录(没有受到版本控制工具控制时也可以查看记录)</li>
+<li>put label: 相当于commit -message “”</li>
+</ol>
+<h3 id="关联一切">关联一切</h3>
+<ol>
+<li>与spring的关联(自动扫描)</li>
+<li>与数据库的关联(自动扫描); 在idea中登录数据库即可</li>
+</ol>
+<h3 id="断点调试">断点调试</h3>
+<h4 id="基础">基础</h4>
+<ol>
+<li><code>cmd+F8</code>: 添加断点</li>
+<li><code>shift+F9</code>： 单步运行；</li>
+<li><code>F8</code>: 单步调试</li>
+<li><code>F9</code>: 直接跳到下个断点，若没有就直接结束调试</li>
+<li><code>cmd+F8</code>: 停用所有断点</li>
+<li><code>shift+cmd+F8</code>: 查看所有断点（不在打断点那一行执行）</li>
+<li><code>cmd+shift+F8</code>: 条件断点（在打断点那一行执行）</li>
+</ol>
+<h4 id="表达式求值evaluate-expression">表达式求值(evaluate expression)</h4>
+<ol>
+<li><code>alt+F8</code>: evaluate expression</li>
+</ol>
+<h4 id="跳到指定行">跳到指定行</h4>
+<ol>
+<li><code>alt + F9</code>：光标移动到指定行，然后按此键跳到光标位置</li>
+</ol>
+<h4 id="setvalue">setValue</h4>
+<ol>
+<li>调试时直接设置值</li>
+</ol>
+<h3 id="debug">debug</h3>
+<p><code>shift+ctl+F9</code>: 运行当前的函数或者运行整个类的函数</p>
+<p><code>cmd+shift+J</code>: 快速编辑运行参数。如 <strong>program arguments</strong></p>
+<p><code>ctl+alt+N</code>: 快速创建文件到当前文件夹</p>
+<p><code>F6</code>: 快速移动文件</p>
+<h3 id="结构图">结构图</h3>
+<p><code>cmd+F12</code> 查看当前field，method</p>
+<p><code>alt+shift+cmd+U</code> 大纲视图的应用</p>
+<p><code>^H</code>: 查看类的继承关系</p>
+<p><code>^+shift+H</code>: 方法调用层次</p>
+<h3 id="所有类-pom都可使用大纲视图">所有类 pom都可使用大纲视图</h3>
+<p><code>alt+shift+cmd+U</code> 大纲视图的应用</p>
 
               </div>
               <div class="post-footer">
@@ -535,7 +723,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://supertange.github.io/post/基础位运算" title="C语言 —— 基础位运算">https://supertange.github.io/post/基础位运算</a>
+      <a href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2" title="工欲善其事，必先利其器——IDEA使用技巧 2">https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -544,21 +732,15 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://supertange.github.io/tag/cSzwzzCQQ"># c语言</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">打造Premium Terminal ——「 zsh, oh my zsh, powerlevel10k 」</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://supertange.github.io/post/必须熟练排序方法">数据结构与算法 —— 应掌握的排序算法</a>
-        <a class="nav-mobile-next" href="https://supertange.github.io/post/必须熟练排序方法">下一篇</a>
+        <a class="nav-pc-next" href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">工欲善其事，必先利其器 —— IDEA使用技巧1</a>
+        <a class="nav-mobile-next" href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

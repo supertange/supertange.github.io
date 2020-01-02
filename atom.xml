@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>坦吉</title>
-    <updated>2020-01-02T03:32:17.625Z</updated>
+    <updated>2020-01-02T13:08:49.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -11,7 +11,18 @@
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 坦吉</rights>
     <entry>
-        <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧]]></title>
+        <title type="html"><![CDATA[工欲善其事，必先利其器——IDEA使用技巧 2]]></title>
+        <id>https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2</id>
+        <link href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2">
+        </link>
+        <updated>2020-01-02T12:56:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧1]]></title>
         <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
         <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
         </link>
@@ -104,18 +115,5 @@
         <link href="https://supertange.github.io/post/堆和栈的区别">
         </link>
         <updated>2017-01-12T05:20:53.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[c语言二级基础内容]]></title>
-        <id>https://supertange.github.io/post/c语言二级基础内容</id>
-        <link href="https://supertange.github.io/post/c语言二级基础内容">
-        </link>
-        <updated>2017-01-11T08:32:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
-<h2 id="问题分析">问题分析</h2>
-]]></summary>
-        <content type="html"><![CDATA[<p>大一狗，c语言都没正式开学，就报了二级，作死的感觉啊，不过，相信自己😊，能行的。</p>
-<h2 id="问题分析">问题分析</h2>
-]]></content>
     </entry>
 </feed>
