@@ -1,0 +1,1057 @@
+<html>
+  <head>
+      <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>坦吉</title>
+<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1578301485502">
+<link rel="stylesheet" href="https://supertange.github.io/styles/main.css">
+<meta name="description" content="温故而知新" />
+
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  </head>
+  <body>
+    <div class="head-top-line"></div>
+    <div class="header-box">
+      
+<header class="header">
+  <div class="blog-header" id="header">
+    <div class="site-meta">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
+        </div>
+      </div>
+      <div class="site-title">
+        <a href="/" class="brand">
+          <span>坦吉</span>
+        </a>
+      </div>
+      <p class="subtitle">Quick notes</p>
+    </div>
+    <nav class="site-nav" id="site_nav">
+      <ul id="nav_ul">
+        
+          <li class="nav-item ">
+            
+              <a href="/">
+                <i class="fa fa-home"></i> 首页
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/archives">
+                <i class="fa fa-archive"></i> 归档
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/tags">
+                <i class="fa fa-tags"></i> 标签
+              </a>
+            
+          </li>
+        
+          <li class="nav-item ">
+            
+              <a href="/post/about">
+                <i class="fa fa-info-circle"></i> 关于
+              </a>
+            
+          </li>
+        
+        <li class="nav-item">
+          <a>
+            <i class="fa fa-search"></i> 搜索
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<script type="text/javascript"> 
+ 
+  let showNav = true;
+
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
+
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      <div class="section-layout">
+        <div class="section-layout-wrapper">
+          
+<div class="sidebar">
+    <div class="sidebar-wrapper" id="sidebar">
+      
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body" id="sidebar_body">
+        
+          <div class="post-side-meta" id="post_side_meta">
+            <div class="sidebar-wrapper">
+  <div class="sidebar-item">
+    <img class="site-author-image" src="https://supertange.github.io/images/avatar.png"/>
+    <p class="site-author-name">坦吉</p>
+    <p class="site-description">温故而知新</p>
+  </div>
+  <div class="sidebar-item side-item-stat">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">16</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  <div class="sidebar-item">
+    <span class="site-item-rss">
+        <i class="fa fa-rss"></i>
+        <a href="https://supertange.github.io/atom.xml" target="_blank">RSS</a>
+    </span>
+  </div>
+  <div class="sidebar-item sidebar-item-social">
+    <div class="social-item">
+      <a href="">
+        <i class="fa fa-github"></i> GitHub
+      </a>
+      <a href="">
+        <i class="fa fa-twitter"></i> Twitter
+      </a>
+    </div>
+    <div class="social-item">
+      <a href="">
+        <i class="fa fa-globe"></i> 豆瓣
+      </a>
+      <a href="">
+        <i class="fa fa-globe"></i> 知乎
+      </a>
+    </div>
+  </div>
+</div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box">
+  <div class="toc-wrapper" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#java8">JAVA8</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a>
+<ul>
+<li><a href="#%E9%80%9F%E5%BA%A6%E5%BF%AB">速度快</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%B0%91%E6%96%B0%E5%A2%9E%E4%BA%86%E6%96%B0%E7%9A%84%E8%AF%AD%E6%B3%95lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F">代码少，新增了新的语法lambda表达式</a></li>
+<li><a href="#%E5%BC%BA%E5%A4%A7%E7%9A%84stream-api">强大的Stream API</a></li>
+<li><a href="#%E4%BE%BF%E4%BA%8E%E5%B9%B6%E8%A1%8C%E6%89%A9%E5%B1%95%E6%94%AF%E6%8C%81">便于并行扩展，支持</a></li>
+<li><a href="#%E6%9C%80%E5%A4%A7%E5%8C%96%E5%87%8F%E5%B0%91%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8optional">最大化减少空指针异常(optional)</a></li>
+</ul>
+</li>
+<li><a href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%8B%89%E5%A7%86%E8%BE%BE">lambda表达式(拉姆达)</a>
+<ul>
+<li><a href="#%E7%AE%AD%E5%A4%B4%E6%93%8D%E4%BD%9C%E7%AC%A6">箭头操作符</a></li>
+<li><a href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F">语法格式</a></li>
+<li><a href="#lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E9%9C%80%E8%A6%81%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%94%AF%E6%8C%81">lambda表达式需要函数式接口的支持</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3">四大核心函数式接口</a>
+<ul>
+<li><a href="#consumer%E6%B6%88%E8%B4%B9%E5%9E%8B%E6%8E%A5%E5%8F%A3">Consumer(消费型接口)</a></li>
+<li><a href="#supplier%E4%BE%9B%E7%BB%99%E5%9E%8B%E6%8E%A5%E5%8F%A3">Supplier(供给型接口)</a></li>
+<li><a href="#functiont-r-%E5%87%BD%E6%95%B0%E5%9E%8B%E6%8E%A5%E5%8F%A3">Function(T , R )函数型接口</a></li>
+<li><a href="#predicatet-%E6%96%AD%E8%A8%80%E5%9E%8B%E6%8E%A5%E5%8F%A3">Predicate<T> 断言型接口</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E5%92%8C%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8">方法引用和构造器引用</a>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8">方法引用</a></li>
+<li><a href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8">构造器引用</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8">数组引用</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%BA%E5%A4%A7%E7%9A%84stream-api-2">强大的Stream API</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B-2">简介</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C">操作</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B9%B6%E8%A1%8C%E6%B5%81%E4%B8%8E%E9%A1%BA%E5%BA%8F%E6%B5%81">并行流与顺序流</a>
+<ul>
+<li><a href="#forkjoin%E6%A1%86%E6%9E%B6-%E6%95%88%E7%8E%87%E9%AB%98%E4%BC%A0%E7%BB%9F%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%8F%91%E7%94%9F%E9%98%BB%E5%A1%9E%E5%90%8E%E5%A4%87%E9%98%9F%E5%88%97%E5%B0%B1%E6%AD%A4%E9%98%BB%E5%A1%9E%E8%80%8Cforkjoin%E6%A8%A1%E5%BC%8F%E9%87%87%E7%94%A8%E5%B7%A5%E4%BD%9C%E7%AA%83%E5%8F%96%E6%A8%A1%E5%BC%8F%E8%87%AA%E5%B7%B1%E6%B2%A1%E6%9C%89%E4%BD%9C%E4%B8%9A%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%97%B6%E7%AA%83%E5%8F%96%E5%85%B6%E4%BB%96%E7%BA%BF%E7%A8%8B%E4%B8%8A%E7%9A%84%E4%BB%BB%E5%8A%A1%E6%89%A7%E8%A1%8C">fork/join框架 ----效率高(传统的多线程发生阻塞后备队列就此阻塞,而fork/join模式采用工作窃取模式，自己没有作业可执行时，窃取其他线程上的任务执行)</a></li>
+<li><a href="#parallel-%E5%B9%B6%E8%A1%8C%E6%B5%81">parallel() 并行流</a></li>
+<li><a href="#sequential-%E6%96%B9%E6%B3%95">sequential() 方法</a></li>
+</ul>
+</li>
+<li><a href="#optional%E7%B1%BB">Optional类</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B-3">简介：</a></li>
+<li><a href="#optional">Optional</a></li>
+<li><a href="#optionaloft-t">Optional.of(T t)</a></li>
+<li><a href="#optionalempty">Optional.empty()</a></li>
+<li><a href="#optionalofnullablet-t">Optional.ofNullable(T t)</a></li>
+<li><a href="#ispresent">isPresent()</a></li>
+<li><a href="#orelset-t">orElse(T t)</a></li>
+<li><a href="#orelsegetsupplier-s">orElseGet(Supplier s)</a></li>
+<li><a href="#mapfunction-f">map(Function f)</a></li>
+<li><a href="#flatmapfunction-mapper">flatMap(Function mapper)</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8E%A5%E5%8F%A3%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95">接口中的默认方法和静态方法</a>
+<ul>
+<li><a href="#%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95">默认方法</a></li>
+<li><a href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95">静态方法</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B0%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9Fapi">新时间日期API</a>
+<ul>
+<li><a href="#%E6%97%A7%E7%9A%84%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9Fapi-%E4%B8%8D%E5%A5%BD%E7%94%A8%E6%98%AF%E5%8F%AF%E5%8F%98%E7%9A%84%E9%83%BD%E4%B8%8D%E6%98%AF%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84-%E5%A4%9A%E4%B8%AA%E7%BA%BF%E7%A8%8B%E6%93%8D%E4%BD%9C%E5%AF%BC%E8%87%B4%E6%97%B6%E9%97%B4%E5%8F%98%E5%8C%96">旧的时间日期API   ------  不好用，是可变的，都不是线程安全的。多个线程操作，导致时间变化。</a></li>
+<li><a href="#javatime-%E8%BF%99%E4%B8%AA%E5%8C%85%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8">java.time.*   -------这个包中的方法不可变，线程安全</a></li>
+<li><a href="#javatimechrono-%E7%89%B9%E6%AE%8A%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%97%A5%E6%9C%9F%E5%8C%85">java.time.chrono  -------特殊格式的日期包</a></li>
+<li><a href="#javatimeformat-%E6%A0%BC%E5%BC%8F%E5%8C%96">java.time.format  ------格式化</a></li>
+<li><a href="#javatimetempral-%E6%97%B6%E9%97%B4%E8%AE%A1%E7%AE%97">java.time.tempral   -------时间计算</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%8D%E5%A4%8D%E6%B3%A8%E8%A7%A3%E5%92%8C%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3">重复注解和类型注解</a>
+<ul>
+<li><a href="#%E9%87%8D%E5%A4%8D%E6%B3%A8%E8%A7%A3">重复注解</a></li>
+<li><a href="#%E7%B1%BB%E5%9E%8B%E6%B3%A8%E8%A7%A3">类型注解</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        cur.text =  deep + ' ' + cur.text;
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.body.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+
+    if (hList.length > 10) {
+      active = 'active-hidden'
+      tocContent.classList.add('closed');
+    } else {
+      tocContent.classList.add('expanded');
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
+        
+      </div>
+    </div>
+</div>
+<script>
+  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
+  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
+  const SLIDE_UP_IN = 'slide-up-in';
+
+  let sidebar = document.querySelector('#sidebar'),
+  tocSideBar = document.querySelector('#tocSideBar'),
+  metaSideBar = document.querySelector('#metaSideBar'),
+  postToc = document.querySelector('#post_toc'),
+  postSiteMeta = document.querySelector('#post_side_meta'),
+  sidebarTitle = document.querySelector('.sidebar-title'),
+  sidebarBody = document.querySelector('#sidebar_body');
+
+  tocSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  metaSideBar.addEventListener('click', (e) => {
+    toggleSidebar(e);
+  });
+
+  function toggleSidebar(e) {
+    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
+    if (currentTitle == e.srcElement) {
+      return ;
+    }
+    let current, showElement, hideElement;
+    if (e.srcElement == metaSideBar) {
+      showElement = postSiteMeta;
+      hideElement = postToc;
+    } else if (e.srcElement == tocSideBar){
+      showElement = postToc;
+      hideElement = postSiteMeta;
+    }
+    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
+    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
+
+    window.Velocity(hideElement, 'stop');
+    window.Velocity(hideElement, 'transition.slideUpOut', {
+      display: 'none',
+      duration: 200,
+      complete: function () {
+        window.Velocity(showElement, 'transition.slideDownIn', {
+          duration: 200
+        });
+      }
+    })
+    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
+    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
+
+  }
+
+  postToc.addEventListener('transitionend', function() {
+    this.classList.remove(SLIDE_UP_IN);
+  });
+
+  let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
+  let hasFix = false;
+  window.addEventListener('scroll', function(e) {
+    if (document.body.scrollTop >= limitTop) {
+      if (!hasFix) {
+        sidebar.classList.add('sidebar-fixed');
+        hasFix = true;
+      }
+    } else {
+      if (hasFix) {
+        sidebar.classList.remove('sidebar-fixed');
+        hasFix = false;
+      }
+    }
+  });
+</script>
+          <div class="section-box">
+            <div class="section post">
+              <div class="article-box">
+    <header class="post-header">
+  <h1 class="post-title">
+    <a class="post-title-link" href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji">
+      JAVA8新特性学习笔记
+    </a>
+  </h1>
+  <div class="post-meta">
+    <span class="meta-item pc-show">
+      <i class="fa fa-calendar-o"></i>
+      <span>发布于</span>
+      <span>2020-01-06</span>
+    </span>
+    
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-clock-o"></i>
+      <span>10分钟</span>
+    </span>
+    <span class="meta-item">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-file-word-o"></i>
+      <span>2331<span class="pc-show">字数</span></span>
+    </span>
+  </div>
+</header>
+</div>
+              <div class="post-body next-md-body" id="post_body">
+                <p>对于Java8的一些特性，早有耳闻，趁考完研这几天空闲时间，赶紧把它学了一遍。特别是lambda和stream的新特性，超级棒很 nice，似乎让Java代码更加优雅了。</p>
+<!-- more -->
+<h1 id="java8">JAVA8</h1>
+<h2 id="简介">简介</h2>
+<h3 id="速度快">速度快</h3>
+<h3 id="代码少新增了新的语法lambda表达式">代码少，新增了新的语法lambda表达式</h3>
+<h3 id="强大的stream-api">强大的Stream API</h3>
+<h3 id="便于并行扩展支持">便于并行扩展，支持</h3>
+<h3 id="最大化减少空指针异常optional">最大化减少空指针异常(optional)</h3>
+<h2 id="lambda表达式拉姆达">lambda表达式(拉姆达)</h2>
+<h3 id="箭头操作符">箭头操作符</h3>
+<ul>
+<li>
+<p>lambda拆分两部分</p>
+<ul>
+<li>
+<p>左侧</p>
+<ul>
+<li>表达式的参数列表</li>
+</ul>
+</li>
+<li>
+<p>右侧</p>
+<ul>
+<li>表达式执行的功能</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="语法格式">语法格式</h3>
+<ul>
+<li>
+<p>无参数 无返回值</p>
+<ul>
+<li>() -&gt;   System.out.println(&quot;&quot;)</li>
+</ul>
+</li>
+<li>
+<p>有1个参数 无返回值</p>
+<ul>
+<li>
+<p>(x) -&gt; System.out:prinln</p>
+<ul>
+<li>只有一个参数小括号可以不写</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>有多个参数 有返回值 lambda语句中有多条语句</p>
+<ul>
+<li>
+<p>(x,y) -&gt;  { xxxxx;xxxxx;xxxx; return xxx;}</p>
+<ul>
+<li>若lambda中只有一条语句时，则打括号和return都可以不写</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>lambda的参数列表的数据类型可以不写，</p>
+<ul>
+<li>JVM编译器可以通过上下文自动类型推断</li>
+</ul>
+</li>
+<li>
+<p>总结：左右遇一括号省略，左侧推断类型省略，lambda中一条语句return省。能省则省</p>
+</li>
+</ul>
+<h3 id="lambda表达式需要函数式接口的支持">lambda表达式需要函数式接口的支持</h3>
+<ul>
+<li>函数式接口：接口中只有一个抽象方法的接口。</li>
+<li>可以使用注解@FunctionalInterface. 当使用注解时，表明该类为函数式接口，类中只能有一个函数</li>
+</ul>
+<h2 id="四大核心函数式接口">四大核心函数式接口</h2>
+<h3 id="consumer消费型接口">Consumer(消费型接口)</h3>
+<ul>
+<li>void accept()</li>
+</ul>
+<h3 id="supplier供给型接口">Supplier(供给型接口)</h3>
+<ul>
+<li>T get()</li>
+</ul>
+<h3 id="functiont-r-函数型接口">Function(T , R )函数型接口</h3>
+<ul>
+<li>R apply(T t)</li>
+</ul>
+<h3 id="predicatet-断言型接口">Predicate<T> 断言型接口</h3>
+<ul>
+<li>boolean test(T t)</li>
+</ul>
+<h2 id="方法引用和构造器引用">方法引用和构造器引用</h2>
+<h3 id="方法引用">方法引用</h3>
+<ul>
+<li>若Lambda体中的内容  已经被实现了，我们可以使用“方法引用”</li>
+<li>对象：：实例方法名</li>
+</ul>
+<p>Employee employeess = new Employee();<br>
+Supplier<String> sup= employeess::getUsername;<br>
+employeeess就是一个实例对象，并且调用实例的方法</p>
+<ul>
+<li>
+<p>类：：静态方法名</p>
+<ul>
+<li>Comparator<Integer> comparator = (x, y) -&gt; Integer.compare(x, y); Comparator<Integer> comparator1 = Integer::compare;<br>
+compare为Integer中的静态方法</li>
+</ul>
+</li>
+<li>
+<p>类：：实例方法名</p>
+<ul>
+<li>规则：第一个参数是实例方法的调用者，第二个参数是实例方法的形式参数<br>
+BiPredicate&lt;String, String&gt; biPredicate = (x,y)-&gt;x.equals(y);<br>
+BiPredicate&lt;String, String&gt; biPredicate1 = String::equals;</li>
+</ul>
+</li>
+<li>
+<p>注：lambda体中方法的参数变量要与引用函数的参数变量的类型个数相同，且返回类型相同</p>
+</li>
+</ul>
+<h3 id="构造器引用">构造器引用</h3>
+<ul>
+<li>Supplier<Employee> supplier = () -&gt; new Employee();<br>
+Supplier<Employee> supplier1=Employee::new;<br>
+构造器的参数列表取决于函数式接口(@functionInterface)中抽象方法的参数列表</li>
+</ul>
+<h3 id="数组引用">数组引用</h3>
+<ul>
+<li>Function&lt;Integer, String[]&gt; fun = x -&gt; new String[10];<br>
+Function&lt;Integer,String[]&gt; function=String[]::new;</li>
+</ul>
+<h2 id="强大的stream-api-2">强大的Stream API</h2>
+<h3 id="简介-2">简介</h3>
+<ul>
+<li>是数据渠道，用于操作数据源(集合数组等)所产生的元素序列。<br>
+“集合讲的是数据流讲究的是计算！”</li>
+<li>与io流相区分开：stream API在流传输过程中可以进行一系列加工操作后产生一个新的流，数据源并不会发生变化，</li>
+<li>⚠️：Stream 自己不会存储数据<br>
+Stream 不会改变源对象。相反，会返回一个持有结果的新的Stream<br>
+Stream  操作是延迟执行的，意味着会等到需要结果时才执行</li>
+</ul>
+<h3 id="操作">操作</h3>
+<ul>
+<li>
+<p>创建Stream</p>
+<ul>
+<li>方式一：通过Collection系列集合提供的Stream()或parallelStream()可以获取流（第一个是串行流，第二个是并行流）<br>
+List<String> list = new ArrayList&lt;&gt;();<br>
+Stream<String> stringStream=list.stream();</li>
+<li>方式二：通过Arrays中的静态方法stream()读取数组流<br>
+Employee[] employees = new Employee[];<br>
+Stream<Employee> stream=Arrays.stream(employees);</li>
+<li>方式三：通过Stream类中的静态方法Of()<br>
+Stream<String> streams=Stream.of(&quot;aa,&quot;,&quot;bb&quot;,&quot;cc&quot;);</li>
+<li>方式四：创建无限流<br>
+1.迭代<br>
+Stream<Integer> stream4=Stream.iterate(0,x-&gt;x+2 );<br>
+stream4.forEach(System.out::println);<br>
+2.生成</li>
+</ul>
+</li>
+<li>
+<p>中间操作(不会执行任何操作)</p>
+<ul>
+<li>
+<p>惰性求值</p>
+<ul>
+<li>多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行任何的处理，而在终止操作时一次性全部处理</li>
+</ul>
+</li>
+<li>
+<p>内部迭代： 迭代操作由Stream API完成<br>
+外部迭代：自己写迭代器</p>
+</li>
+<li>
+<p>筛选与切片</p>
+<ul>
+<li>
+<p>filter</p>
+<ul>
+<li>接受lambda，从流中排除某些元素</li>
+</ul>
+</li>
+<li>
+<p>limit</p>
+<ul>
+<li>截断流，使元素不超过给定数量</li>
+</ul>
+</li>
+<li>
+<p>skip(n)</p>
+<ul>
+<li>跳过元素，返回一个扔掉前n个元素的流。若流中元素不足n个，则返回一个空流。与limit(x)互补</li>
+</ul>
+</li>
+<li>
+<p>distinct</p>
+<ul>
+<li>筛选，通过流所生成的hashcode()和equals()去除重复元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>映射</p>
+<ul>
+<li>
+<p>map</p>
+<ul>
+<li>接收lambda，将元素转换成其他形式或提取信息。接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素<br>
+List<String> stringList3=Arrays.asList(&quot;aaa&quot;,&quot;bbbb&quot;,&quot;fadfasd&quot;);<br>
+stringList3.stream().map(str-&gt;str.toUpperCase()).forEach(System.out::println);</li>
+</ul>
+</li>
+<li>
+<p>flatMap</p>
+<ul>
+<li>接收一个函数作为参数，将流中的每个值都替换成一个流，然后把所有流连接成一个流</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>排序</p>
+<ul>
+<li>
+<p>sorted()</p>
+<ul>
+<li>自然排序</li>
+</ul>
+</li>
+<li>
+<p>sorted(Comparator)</p>
+<ul>
+<li>定制排序</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>终止操作(一次性执行全部操作)</p>
+<ul>
+<li>
+<p>查找与匹配</p>
+<ul>
+<li>
+<p>allMatch</p>
+<ul>
+<li>检查是匹配所有元素</li>
+</ul>
+</li>
+<li>
+<p>anyMatch</p>
+<ul>
+<li>检查是否匹配至少一个元素</li>
+</ul>
+</li>
+<li>
+<p>noneMatch</p>
+<ul>
+<li>检查是否没有匹配所有元素</li>
+</ul>
+</li>
+<li>
+<p>findFirst</p>
+<ul>
+<li>返回第一个元素</li>
+</ul>
+</li>
+<li>
+<p>findAny</p>
+<ul>
+<li>返回当前流中的任意元素</li>
+</ul>
+</li>
+<li>
+<p>count</p>
+<ul>
+<li>返回流中的元素的总个数</li>
+</ul>
+</li>
+<li>
+<p>max</p>
+<ul>
+<li>返回流中的的最大值</li>
+</ul>
+</li>
+<li>
+<p>min</p>
+<ul>
+<li>返回流中的最小值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>归约</p>
+<ul>
+<li>
+<p>reduce(T identity, BinaryOperator)</p>
+<ul>
+<li>可以将流中的元素反复结合起来，得到一个值<br>
+List<Integer> integerList=Arrays.asList(1,2,3,4,5,6,7);<br>
+Integer sum=integerList.stream().reduce(0,(x,y)-&gt;x+y);//sum</li>
+<li>map 和reduce 的链接通常称为map-reduce模式<br>
+大数据中应用广泛（map做提取操作，reduce做规约）</li>
+</ul>
+</li>
+<li>
+<p>collection</p>
+<ul>
+<li>将流转换为其他形式，接受一个Collection接口实现，用于Stream中元素做汇总的方法<br>
+employees.stream().map(Employee::getUsername)<br>
+.collect(Collectors.toCollection(HashSet::new)).forEach(System.out::println);</li>
+<li>多级分组  Collectors.groupingBy</li>
+<li>分区：Collectors.partitioningBy()</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="并行流与顺序流">并行流与顺序流</h2>
+<h3 id="forkjoin框架-效率高传统的多线程发生阻塞后备队列就此阻塞而forkjoin模式采用工作窃取模式自己没有作业可执行时窃取其他线程上的任务执行">fork/join框架 ----效率高(传统的多线程发生阻塞后备队列就此阻塞,而fork/join模式采用工作窃取模式，自己没有作业可执行时，窃取其他线程上的任务执行)</h3>
+<p>将一个大任务进行拆分成若干个小任务(拆到不可再拆时),再将一个个的小任务运算的结果进行join汇总。</p>
+<h3 id="parallel-并行流">parallel() 并行流</h3>
+<ul>
+<li>速度超快，cpu利用超级高</li>
+</ul>
+<h3 id="sequential-方法">sequential() 方法</h3>
+<ul>
+<li>顺序流</li>
+</ul>
+<h2 id="optional类">Optional类</h2>
+<h3 id="简介-3">简介：</h3>
+<p>是一个容器，代表一个值存在或不存在，原来用null表示一个值不存在，现在Optional可以更好的表达这个概念，可以避免空指针异常</p>
+<h3 id="optional">Optional</h3>
+<ul>
+<li>可以快速定位出问题的位置，1.8之前null报错不能直接报出位置，只能找出通过debug找到</li>
+</ul>
+<h3 id="optionaloft-t">Optional.of(T t)</h3>
+<ul>
+<li>创建一个optional实例</li>
+</ul>
+<h3 id="optionalempty">Optional.empty()</h3>
+<ul>
+<li>创建一个空的optional</li>
+</ul>
+<h3 id="optionalofnullablet-t">Optional.ofNullable(T t)</h3>
+<ul>
+<li>若t不为空时，创建optional实例，否者创建实例</li>
+</ul>
+<h3 id="ispresent">isPresent()</h3>
+<ul>
+<li>判断是否包含值</li>
+</ul>
+<h3 id="orelset-t">orElse(T t)</h3>
+<ul>
+<li>如果调用对象中有值，返回该值，否则返回t</li>
+</ul>
+<h3 id="orelsegetsupplier-s">orElseGet(Supplier s)</h3>
+<ul>
+<li>如果调用对象包含值，返回该值，否则返回s获取的值</li>
+</ul>
+<h3 id="mapfunction-f">map(Function f)</h3>
+<ul>
+<li>如果有值对其处理，并返回处理后的optional，否则返回optional.empty()</li>
+</ul>
+<h3 id="flatmapfunction-mapper">flatMap(Function mapper)</h3>
+<ul>
+<li>与map类似，要求返回值必须是optional</li>
+</ul>
+<h2 id="接口中的默认方法和静态方法">接口中的默认方法和静态方法</h2>
+<h3 id="默认方法">默认方法</h3>
+<ul>
+<li>1.8以前 只有两种：一种是全局静态常量，一种是抽象方法</li>
+<li>新：default方法 默认方法<br>
+default String getName(){}</li>
+<li>接口默认方法的“类优先原则”<br>
+若一个接口中定义了一个默认方法，而另一个父类或接口中又定义了一个同名的方法时<br>
+1.选择父类中的方法，如果一个父类提供了具体的实现，那么接口中具有相同名称和参数的方法会被忽略<br>
+2.接口冲突。如果一个父接口提供一个默认的方法，而另个一个接口也提供了一个具有相同名称和参数列表的方法(不管方法是否是默认方法)，那么必须覆盖该方法来解决冲突----------(单继承接口可以多个实现)</li>
+</ul>
+<h3 id="静态方法">静态方法</h3>
+<h2 id="新时间日期api">新时间日期API</h2>
+<h3 id="旧的时间日期api-不好用是可变的都不是线程安全的-多个线程操作导致时间变化">旧的时间日期API   ------  不好用，是可变的，都不是线程安全的。多个线程操作，导致时间变化。</h3>
+<p>如：simpleDateFormat  ----可变的，存在现在安全问题<br>
+不可变是指：如String定义的这种常量，不能变化，除非其他线程自己创建一个新的实例</p>
+<h3 id="javatime-这个包中的方法不可变线程安全">java.time.*   -------这个包中的方法不可变，线程安全</h3>
+<p>instant ------- 时间戳<br>
+localDate ------本地日期<br>
+localTime ------本地时间<br>
+localDateTime -----本地日期时间</p>
+<h3 id="javatimechrono-特殊格式的日期包">java.time.chrono  -------特殊格式的日期包</h3>
+<h3 id="javatimeformat-格式化">java.time.format  ------格式化</h3>
+<p>如：DateTimeFormatter dtfsss = DateTimeFormatter.ofPattern(&quot;yyyy年MM月dd日&quot;);</p>
+<h3 id="javatimetempral-时间计算">java.time.tempral   -------时间计算</h3>
+<p>TemporalAdjuster  时间矫正器<br>
+如将日期调到下一个星期等：<br>
+LocalDateTime localDateTimes =ldr.with(TemporalAdjusters.next(DayOfWeek.MONDAY));</p>
+<h2 id="重复注解和类型注解">重复注解和类型注解</h2>
+<h3 id="重复注解">重复注解</h3>
+<ul>
+<li>@Repeatalble(指定的容器.class)<br>
+@MyAnnotaion(&quot;hellow&quot;)<br>
+@MyAnnotaion(&quot;heihei&quot;)<br>
+public void test(){<br>
+xxxxxxxxxxx;<br>
+}</li>
+</ul>
+<h3 id="类型注解">类型注解</h3>
+<ul>
+<li>@Target({TYPE,xxxxxxxxxx,x,x,x,x,xx, TYPE_PARAMETER})    //TYPE_PARAMETER就是标记类型<br>
+public @interface MyAnnotation{ }</li>
+<li>public void show(@MyAnnotaion(&quot;abd&quot;) String str){<br>
+xxxxxxxxx;<br>
+}</li>
+</ul>
+
+              </div>
+              <div class="post-footer">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      坦吉
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji" title="JAVA8新特性学习笔记">https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外,转载请注明出处！
+    </li>
+  </ul>
+  <div class="tags">
+    
+  </div>
+  <div class="nav">
+    <div class="nav-prev">
+      
+    </div>
+    <div class="nav-next">
+      
+        <a class="nav-pc-next" href="https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti">Mac下解决IDEA无法启动问题</a>
+        <a class="nav-mobile-next" href="https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
+      
+    </div>
+  </div>
+</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
+    </div>
+    <div class="poweredby">
+      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
+      <div>Copy<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+    </div>
+  </footer>
+  <div class="back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    <span class="scrollpercent">
+      <span id="back_to_top_text">100</span>%
+    </span>
+  </div>
+</div>
+
+<script>
+
+  let body = document.body;
+
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(body.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = body.scrollTop / (body.scrollHeight - body.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    back2TopText.textContent = Math.floor(percent);
+  });
+
+  // 动态调整站点概览高度
+  let sideBar = document.querySelector('.sidebar');
+  let navUl = document.querySelector('#nav_ul');
+  sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px; opacity: 1;';
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
+</script>
+    </div>
+  </body>
+  <script src="/media/js/motion.js"></script>
+</html>
