@@ -113,9 +113,17 @@
 <div class="sidebar">
     <div class="sidebar-wrapper" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body" id="sidebar_body">
         
-          <div class="sidebar-wrapper">
+          <div class="post-side-meta" id="post_side_meta">
+            <div class="sidebar-wrapper">
   <div class="sidebar-item">
     <img class="site-author-image" src="https://supertange.github.io/images/avatar.png"/>
     <p class="site-author-name">坦吉</p>
@@ -167,6 +175,183 @@
     </div>
   </div>
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box">
+  <div class="toc-wrapper" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#steep1">steep1</a>
+<ul>
+<li><a href="#check-files">check files</a></li>
+<li><a href="#edit-file">edit file</a></li>
+<li><a href="#if-installed-zsh-terminal">if installed zsh terminal</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        cur.text =  deep + ' ' + cur.text;
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.body.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+
+    if (hList.length > 10) {
+      active = 'active-hidden'
+      tocContent.classList.add('closed');
+    } else {
+      tocContent.classList.add('expanded');
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -248,118 +433,77 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://supertange.github.io/post/MarkDown">
-      MarkDown的基本使用方法
+    <a class="post-title-link" href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti">
+      Mac下java和maven环境变量不生效问题
     </a>
   </h1>
   <div class="post-meta">
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2016-11-20</span>
+      <span>2020-01-12</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://supertange.github.io/tag/UKhHiHuhO">
-              <span>小技术</span>
-            </a>
-          
-        
-      </span>
     
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>1分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>323<span class="pc-show">字数</span></span>
+      <span>113<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <h1>the num1 title</h1>
-<pre><code># 一级标题
-## 二级标题
-### 三极标题
-#### 四级标题
-##### 五级标题
-###### 六级标题
-</code></pre>
-<!--more-->
-<p><strong>我是粗体</strong>  空山新雨</p>
-<p>高亮标记文字  &nbsp;&nbsp;&nbsp;<code>niafkdjfkajfkafkdfj</code></p>
-<pre><code>高亮显示文字写英文版的  ` ` 号即可高亮显示
-&amp;nbsp;表示为输出空格
-</code></pre>
-<blockquote><p>下面有序序列 ，有数字就行例如<code>1. 4. 5.</code>  输出结果为<code>1. 2. 3.</code>不必按顺序来</p></blockquote>
-<pre><code>“ &gt; ”表示为引用别人的东西  ，有大大引号
-</code></pre>
+                <h3 id="steep1">steep1</h3>
+<h4 id="check-files">check files</h4>
+<blockquote>
+<p><code>~/.bashrc</code><br>
+<code>~/.bash_profile</code><br>
+<code>~/.profile</code></p>
+</blockquote>
+<h4 id="edit-file">edit file</h4>
 <ol>
-<li>dafdfdsf</li>
-<li>dsfdsafsad</li>
-<li>dsfsafds</li>
-<li>Bird</li>
-<li>McHale</li>
+<li>Open Terminal</li>
+<li>Type</li>
 </ol>
-<hr />
-<pre><code>***三个＊号表示添加一个分隔符
+<pre><code class="language-bash">vim .bash_profile
 </code></pre>
-<h1>大标题&nbsp;</h1>
-<pre><code>＝＝＝＝＝＝＝＝＝＝表示为添加大标题
+<ol start="3">
+<li>Type your java instalation dir in my case</li>
+</ol>
+<pre><code class="language-bash">#java8
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 </code></pre>
-<hr />
-<p>dhsafjhdjs fsdfsfs</p>
-<hr />
-<p>法国电视上发生的😦</p>
-<pre><code>回车＋tab健＋回车即可添加文本框
+<ol start="4">
+<li>Click ESC then type :wq (save and quit in vim)</li>
+<li>Then type</li>
+</ol>
+<pre><code class="language-bash">source .bash_profile
 </code></pre>
-<ul>
-<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-<li>Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus.</li>
-<li><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-Suspendisse id sem consectetuer libero luctus adipiscing.
-A list item with a blockquote:</p>
-<blockquote><p>This is a blockquote
-inside a list item.</p></blockquote></li>
-<li><p>一列表项包含一个列表区块：</p>
-<pre><code>int main=10;
-</code></pre></li>
-</ul>
-<p>1986. What a great season.</p>
-<hr />
-<p>代码如下：</p>
-<pre><code>int main(){
-    int a=1;
-    int b=2; 
-}   
+<ol start="6">
+<li></li>
+</ol>
+<pre><code class="language-bash">echo $JAVA_HOME 
 </code></pre>
-<hr />
-<p>This is <a href="http://example.com/" title="Title">an example</a> inline link.</p>
-<p><a href="http://example.net/">This link</a> has no title attribute.</p>
-<hr />
-<h2>代码</h2>
-<blockquote><p><strong>by ht</strong></p></blockquote>
-<pre><code>    int main(){
-        int a=1;
-        int b=2;
-        int c=2;
-        printf("%d",a+b+c);
-    }
+<p>if you see the path you are all set.</p>
+<h4 id="if-installed-zsh-terminal">if installed zsh terminal</h4>
+<p>I edit .bash_profile i found</p>
+<pre><code class="language-bash">export JAVA_HOME=&quot;/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home 
 </code></pre>
-<h4>新的一天又来了</h4>
-<ul>
-<li>新的挑战又即将来临，我希望有一个她 能帮助我度过这寒冷的冬夜</li>
-</ul>
+<p>But When I run terminal echo $JAVA_HOME it was returning empty, Later I found that the file .zshrc was missing I created this file with</p>
+<pre><code class="language-bash">touch .zshrc 
+</code></pre>
+<p>Then edit it by</p>
+<pre><code class="language-bash">vim .zshrc 
+</code></pre>
+<p>and wrote</p>
+<pre><code class="language-bash">source ~/.bash_profile
+</code></pre>
 
               </div>
               <div class="post-footer">
@@ -370,7 +514,7 @@ inside a list item.</p></blockquote></li>
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://supertange.github.io/post/MarkDown" title="MarkDown的基本使用方法">https://supertange.github.io/post/MarkDown</a>
+      <a href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti" title="Mac下java和maven环境变量不生效问题">https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -379,21 +523,15 @@ inside a list item.</p></blockquote></li>
   </ul>
   <div class="tags">
     
-      <a href="https://supertange.github.io/tag/UKhHiHuhO"># 小技术</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" href="https://supertange.github.io/post/c语言二级基础内容">c语言二级基础内容</a class="nav-pc-next">
-        <a class="nav-mobile-prev" href="https://supertange.github.io/post/c语言二级基础内容">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" href="https://supertange.github.io/post/The-new-sites-style">The new sites style</a>
-        <a class="nav-mobile-next" href="https://supertange.github.io/post/The-new-sites-style">下一篇</a>
+        <a class="nav-pc-next" href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji">JAVA8新特性学习笔记</a>
+        <a class="nav-mobile-next" href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
