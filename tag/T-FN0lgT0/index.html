@@ -1,10 +1,15 @@
+<!DOCTYPE html>
 <html>
   <head>
       <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>坦吉</title>
-<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1579685850572">
+<meta name="keywords" content="SuperTange的个人博客">
+<meta name="description" content="温故而知新">
+<link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1579686295247">
 <link rel="stylesheet" href="https://supertange.github.io/styles/main.css">
+
+<link rel="stylesheet" href="/media/css/pisces.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -17,7 +22,6 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-      <meta name="description" content="温故而知新">
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -122,7 +126,7 @@
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://supertange.github.io/images/avatar.png"/>
     <p class="site-author-name">坦吉</p>
-    <p class="site-description right-motion">温故而知新</p>
+    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
   </div>
   <div class="sidebar-item side-item-stat right-motion">
     <div class="sidebar-item-box">
@@ -160,6 +164,10 @@
     <div class="sidebar-item sidebar-item-social">
       <div class="social-item">
           
+            <a href="https://github.com/supertange">
+              <i class="fa fa-github-alt"></i> Github
+            </a>
+          
           
           
           
@@ -169,9 +177,21 @@
       </div>
     </div>
   
+
+  <div class="sidebar-item right-motion sidebar-item-friends">
+    <p class="friends-title"><i class="fa fa-globe"></i> 友情链接</p>
+    <div class="friends-box">
+      
+        <p>
+          <a href="https://www.google.com/">【Google】</a>
+        </p>
+      
+    </div>
+  </div>
+
 </div>
 </div>
-          <div class="section-box">
+          <div class="section-box tag-line">
             <section class="section posts-expand">
               <div class="tag-timeline-box">
   <div class="tag-timeline-wrapper">
@@ -276,8 +296,7 @@
       © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
     </div>
     <div class="poweredby">
-      <div class="power-left">Power By<a href="https://github.com/hsxyhao"> HsxyHao</a></div>
-      <div>Copy From<a href="https://github.com/iissnan/hexo-theme-next"> Hexo Next Theme</a></div>
+      Powered by Tange
     </div>
   </footer>
   
@@ -290,8 +309,46 @@
     </span>
     
   </div>
+  
+  
+    <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
+<div id="landlord" style="left:5px;bottom:0px;" data-key="">
+  <div class="message" style="opacity:0"></div>
+  <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+  <div class="live_talk_input_body">
+    <div class="live_talk_input_name_body">
+      <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+    </div>
+    <div class="live_talk_input_text_body">
+      <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+      <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+    </div>
+  </div>
+  <input name="live_talk" id="live_talk" value="1" type="hidden" />
+  <div class="live_ico_box">
+    <div class="live_ico_item type_info" id="showInfoBtn"></div>
+    <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+    <div class="live_ico_item type_music" id="musicButton"></div>
+    <div class="live_ico_item type_youdu" id="youduButton"></div>
+    <div class="live_ico_item type_quit" id="hideButton"></div>
+    <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+    <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+    <input id="duType" value="douqilai" type="hidden">
+    <input name="live2dBGM" value="http://jaymusic.gitee.io/jaymusic31/003OUlho2HcRHC.mp3" type="hidden">
+    <input name="live2dBGM" value="http://jaymusic.gitee.io/jaymusic23/002qU5aY3Qu24y.mp3" type="hidden">
+  </div>
 </div>
-
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var message_Path = '/media/live2d/histoire/';
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
+  
+</div>
 <script>
 
   let sideBarOpen = 'sidebar-open';
@@ -319,13 +376,13 @@
   }
 
   back2Top.addEventListener("click", function(e) {
-    scrollAnimation(body.scrollTop, 0);
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
     e.stopPropagation();
     return false;
   });
   
   window.addEventListener('scroll', function(e) {
-    let percent = body.scrollTop / (body.scrollHeight - body.clientHeight) * 100;
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
     if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
       back2Top.classList.add('back-top-active');
     }
@@ -337,35 +394,67 @@
     }
   });
 
-  // 动态调整站点概览高度
-  if (back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    sideBar.style = 'margin-top:' + (navUl.children.length * 42 + 162) + 'px;';
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
   }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
   
   let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
 
   if (drawerBox) {
     let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
     drawerBox.onclick = function() {
       open = !open;
       window.Velocity(rightSideBar, 'stop');
       window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
       if (open) {
         window.Velocity(rightSideBar, {
           width: RIGHT_MOVE_DIS
         }, {
           duration: MOTION_TIME,
           begin: function() {
-            console.log(rightMotions)
-            window.Velocity(rightMotions, 'transition.slideRightIn',{
-            });
+            window.Velocity(rightMotions, transitionDir,{ });
           }
         })
-        window.Velocity(viewport, {
-          paddingRight: RIGHT_MOVE_DIS
-        } ,{
+        window.Velocity(viewport, openProp,{
           duration: MOTION_TIME
         });
       } else {
@@ -379,9 +468,7 @@
             });
           }
         })
-        window.Velocity(viewport, {
-          paddingRight: '0px'
-        } ,{
+        window.Velocity(viewport, closeProp ,{
           duration: MOTION_TIME
         });
       }
