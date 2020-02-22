@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>Tange</title>
-    <updated>2020-02-10T04:47:59.012Z</updated>
+    <updated>2020-02-22T05:44:16.389Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Tange</rights>
     <entry>
         <title type="html"><![CDATA[Mac ox10.13以上版本homebrew不能更新软件]]></title>
-        <id>https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian</id>
-        <link href="https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian">
+        <id>https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian/</id>
+        <link href="https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian/">
         </link>
         <updated>2020-02-10T04:47:08.000Z</updated>
         <summary type="html"><![CDATA[<p>如题</p>
@@ -23,8 +23,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac下java和maven环境变量不生效问题]]></title>
-        <id>https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti</id>
-        <link href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti">
+        <id>https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti/</id>
+        <link href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti/">
         </link>
         <updated>2020-01-12T07:30:48.000Z</updated>
         <summary type="html"><![CDATA[<p>今天做项目用到了maven, 但是我的maven却不能全局使用，便开始搜索问题，解决问题。</p>
@@ -34,8 +34,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[JAVA8新特性学习笔记]]></title>
-        <id>https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji</id>
-        <link href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji">
+        <id>https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji/</id>
+        <link href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji/">
         </link>
         <updated>2020-01-06T08:59:33.000Z</updated>
         <summary type="html"><![CDATA[<p>对于Java8的一些特性，早有耳闻，趁考完研这几天空闲时间，赶紧把它学了一遍。特别是lambda和stream的新特性，超级棒很 nice，似乎让Java代码更加优雅了。</p>
@@ -45,8 +45,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Mac下解决IDEA无法启动问题]]></title>
-        <id>https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti</id>
-        <link href="https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti">
+        <id>https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti/</id>
+        <link href="https://supertange.github.io/post/mac-xia-jie-jue-idea-wu-fa-qi-dong-wen-ti/">
         </link>
         <updated>2020-01-04T03:12:13.000Z</updated>
         <summary type="html"><![CDATA[<p>今天IDEA突然不能使用，提示注册码失效，便开始了一番折腾。最后在一个群组中找到了解决方案，下载破解jar包 放到 IDEA的<code>bin</code> 目录下，随即重启idea就打不开了。</p>
@@ -56,8 +56,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧 2]]></title>
-        <id>https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2</id>
-        <link href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2">
+        <id>https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2/</id>
+        <link href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2/">
         </link>
         <updated>2020-01-02T12:56:19.000Z</updated>
         <summary type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
@@ -67,8 +67,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧1]]></title>
-        <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao</id>
-        <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao">
+        <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao/</id>
+        <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao/">
         </link>
         <updated>2019-12-24T08:43:37.000Z</updated>
         <summary type="html"><![CDATA[<p>把工具熟练好，工作起来才会得心应手，事半功倍。大名鼎鼎的intelliJ IDEA功能强大，对于JAVA开发者而言更是利器，熟练地使用IDEA必然是重中之重。</p>
@@ -78,8 +78,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[打造Premium Terminal ——「 zsh, oh my zsh, powerlevel10k 」]]></title>
-        <id>https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac</id>
-        <link href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac">
+        <id>https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac/</id>
+        <link href="https://supertange.github.io/post/yong-zsh-oh-my-zsh-powerlevel10k-da-zao-zhuan-shu-zi-ji-de-zhong-duan-mac/">
         </link>
         <updated>2019-12-24T06:18:35.000Z</updated>
         <summary type="html"><![CDATA[<p>很 nice 的一个终端。</p>
@@ -89,8 +89,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://supertange.github.io/post/hello-gridea</id>
-        <link href="https://supertange.github.io/post/hello-gridea">
+        <id>https://supertange.github.io/post/hello-gridea/</id>
+        <link href="https://supertange.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
@@ -102,8 +102,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言 —— 基础位运算]]></title>
-        <id>https://supertange.github.io/post/基础位运算</id>
-        <link href="https://supertange.github.io/post/基础位运算">
+        <id>https://supertange.github.io/post/基础位运算/</id>
+        <link href="https://supertange.github.io/post/基础位运算/">
         </link>
         <updated>2017-03-03T13:53:20.000Z</updated>
         <summary type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
@@ -113,8 +113,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[数据结构与算法 —— 应掌握的排序算法]]></title>
-        <id>https://supertange.github.io/post/必须熟练排序方法</id>
-        <link href="https://supertange.github.io/post/必须熟练排序方法">
+        <id>https://supertange.github.io/post/必须熟练排序方法/</id>
+        <link href="https://supertange.github.io/post/必须熟练排序方法/">
         </link>
         <updated>2017-02-11T12:47:12.000Z</updated>
         <summary type="html"><![CDATA[<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
