@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>Tange</title>
-    <updated>2020-02-29T03:37:09.020Z</updated>
+    <updated>2020-02-29T08:13:58.326Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://supertange.github.io/images/avatar.png</logo>
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tange</rights>
+    <entry>
+        <title type="html"><![CDATA[深入学习ArrayList源代码]]></title>
+        <id>https://supertange.github.io/post/shen-ru-xue-xi-arraylist-yuan-dai-ma/</id>
+        <link href="https://supertange.github.io/post/shen-ru-xue-xi-arraylist-yuan-dai-ma/">
+        </link>
+        <updated>2020-02-29T08:09:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>一直在用ArrayList ，但始终没有搞明白它的原理，趁疫情闲在家中，决定搞清这些原理。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一直在用ArrayList ，但始终没有搞明白它的原理，趁疫情闲在家中，决定搞清这些原理。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mac ox10.13以上版本homebrew不能更新软件]]></title>
         <id>https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian/</id>
@@ -109,17 +120,6 @@
         <summary type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数据结构与算法 —— 应掌握的排序算法]]></title>
-        <id>https://supertange.github.io/post/必须熟练排序方法/</id>
-        <link href="https://supertange.github.io/post/必须熟练排序方法/">
-        </link>
-        <updated>2017-02-11T12:47:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
 ]]></content>
     </entry>
 </feed>
