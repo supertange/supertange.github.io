@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>Tange</title>
-    <updated>2020-03-22T15:00:45.582Z</updated>
+    <updated>2020-06-15T14:21:32.229Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://supertange.github.io/images/avatar.png</logo>
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tange</rights>
+    <entry>
+        <title type="html"><![CDATA[比较常用的Eclipse快捷键]]></title>
+        <id>https://supertange.github.io/post/bi-jiao-chang-yong-de-eclipse-kuai-jie-jian/</id>
+        <link href="https://supertange.github.io/post/bi-jiao-chang-yong-de-eclipse-kuai-jie-jian/">
+        </link>
+        <updated>2020-06-15T14:15:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近入职了一家外包公司，疫情所迫(其实学校背景+技术不太好)。公司内部要求使用eclipse开发，遂熟悉了一波eclipse的相关快捷键。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近入职了一家外包公司，疫情所迫(其实学校背景+技术不太好)。公司内部要求使用eclipse开发，遂熟悉了一波eclipse的相关快捷键。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[深入学习ArrayList源代码]]></title>
         <id>https://supertange.github.io/post/shen-ru-xue-xi-arraylist-yuan-dai-ma/</id>
@@ -109,17 +120,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C语言 —— 基础位运算]]></title>
-        <id>https://supertange.github.io/post/基础位运算/</id>
-        <link href="https://supertange.github.io/post/基础位运算/">
-        </link>
-        <updated>2017-03-03T13:53:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>原码，反码，补码的运算。</p>
 ]]></content>
     </entry>
 </feed>
