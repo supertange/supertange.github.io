@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>c语言基础小结 | Tange</title>
+<title>丑数问题 | Tange</title>
 <meta name="keywords" content="SuperTange的个人博客">
 <meta name="description" content="温故而知新">
 <link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1592319174932">
@@ -22,8 +22,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="c语言基础小结" />
-    <meta name="keywords" content="c语言" />
+    <meta name="description" content="丑数问题" />
+    <meta name="keywords" content="算法" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -128,9 +128,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body pisces" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://supertange.github.io/images/avatar.png"/>
@@ -198,6 +206,182 @@
   </div>
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%91%E6%95%B0%E9%97%AE%E9%A2%98">丑数问题</a>
+<ul>
+<li><a href="#%E6%80%A7%E8%B4%A8">性质：</a></li>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -283,8 +467,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://supertange.github.io/post/c语言基础小结/">
-      c语言基础小结
+    <a class="post-title-link" href="https://supertange.github.io/post/chou-shu-wen-ti/">
+      丑数问题
     </a>
   </h1>
   <div class="post-meta">
@@ -292,7 +476,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2017-02-03</span>
+      <span>2020-06-16</span>
     </span>
     
       <span class="meta-item">
@@ -301,8 +485,8 @@
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://supertange.github.io/tag/cSzwzzCQQ/">
-              <span>c语言</span>
+            <a href="https://supertange.github.io/tag/YwyEKmbal/">
+              <span>算法</span>
             </a>
           
         
@@ -311,19 +495,50 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>90<span class="pc-show">字数</span></span>
+      <span>353<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>年前将c语言从头复习了一遍，现在有看了下笔记，对指针的认识的有进一步的认识，<!--more-->c语言不学指针就不算事学了c语言，除了指针其他就像是学语法。<br>
-过年的一周时间都走亲戚😂，现在继续开始搞c语言。争取3月过二级。</p>
+                <h1 id="丑数问题">丑数问题</h1>
+<p>一道<strong>动态规划</strong>问题。</p>
+<!-- more -->
+<pre><code class="language-html">我们把只包含因子(因数) 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。 
+
+示例:
+
+输入: n = 10
+输出: 12
+解释: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12 是前 10 个丑数。
+说明:  
+
+		1 是丑数。
+		n 不超过1690。
+</code></pre>
+<h2 id="性质">性质：</h2>
+<p>​	丑数的递推性质：丑数只包含因子2，3，5。因此有 “ 丑数 = 最小丑数 ✖️ 某因子”</p>
+<h2 id="思路">思路</h2>
+<p>丑数只包含因子2，3，5。那么2，3，5这几个数组合相乘起来就能得到一个丑数，那么更近一步，一个丑数乘以2，3，5后可以得到另一个丑数。因此，我们就可以通过已经存在的丑数推算出下一个丑数。但是我们需要一个从小到大的序列，我们每次只要最小值即可。</p>
+<p>**还有一个关键的地方，就是要知道2、3、5使用的次数，以保证不会出现重复的现象。**所以有最小值相同的情况时，那么他们的位置都要加1。</p>
+<pre><code class="language-java">public int nthUglyNumber(int n) {
+        int a = 0, b = 0, c = 0;
+        int[] dp = new int[n];
+        dp[0] = 1;
+        for(int i = 1; i &lt; n; i++) {
+            dp[i] = Math.min(Math.min(dp[a] * 2, dp[b] * 3 ), dp[c] * 5);
+            if(dp[i] == dp[a] * 2) a++;
+            if(dp[i] == dp[b] * 3) b++;
+            if(dp[i] == dp[c] * 5) c++;
+        }
+        return dp[n - 1];
+    }
+</code></pre>
 
               </div>
               <div class="post-footer">
@@ -334,7 +549,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://supertange.github.io/post/c语言基础小结/" title="c语言基础小结">c语言基础小结</a>
+      <a href="https://supertange.github.io/post/chou-shu-wen-ti/" title="丑数问题">丑数问题</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -343,21 +558,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://supertange.github.io/tag/cSzwzzCQQ/"># c语言</a>
+      <a href="https://supertange.github.io/tag/YwyEKmbal/"># 算法</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="2017年我的规划" href="https://supertange.github.io/post/2017年我的规划/">2017年我的规划</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="2017年我的规划" href="https://supertange.github.io/post/2017年我的规划/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="c语言知识查漏补缺" href="https://supertange.github.io/post/c语言知识查漏补缺/">c语言知识查漏补缺</a>
-        <a class="nav-mobile-next" title="c语言知识查漏补缺" href="https://supertange.github.io/post/c语言知识查漏补缺/">下一篇</a>
+        <a class="nav-pc-next" title="比较常用的Eclipse快捷键" href="https://supertange.github.io/post/bi-jiao-chang-yong-de-eclipse-kuai-jie-jian/">比较常用的Eclipse快捷键</a>
+        <a class="nav-mobile-next" title="比较常用的Eclipse快捷键" href="https://supertange.github.io/post/bi-jiao-chang-yong-de-eclipse-kuai-jie-jian/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
