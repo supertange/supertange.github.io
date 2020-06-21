@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>Tange</title>
-    <updated>2020-06-18T14:03:44.691Z</updated>
+    <updated>2020-06-21T07:19:41.281Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -11,11 +11,26 @@
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tange</rights>
     <entry>
+        <title type="html"><![CDATA[剑指offer--约瑟夫环问题]]></title>
+        <id>https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/</id>
+        <link href="https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/">
+        </link>
+        <updated>2020-06-21T07:17:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>剑指offer中的 约瑟夫环问题（丢手绢问题），本文采用了链表解法和数学解法两种方式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>剑指offer中的 约瑟夫环问题（丢手绢问题），本文采用了链表解法和数学解法两种方式。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[二叉搜索树转双向循环链表]]></title>
         <id>https://supertange.github.io/post/er-cha-sou-suo-shu-zhuan-shuang-xiang-xun-huan-lian-biao/</id>
         <link href="https://supertange.github.io/post/er-cha-sou-suo-shu-zhuan-shuang-xiang-xun-huan-lian-biao/">
         </link>
         <updated>2020-06-18T14:02:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>通过对二叉搜索树的中序遍历，得到一个有序的链表。在搜索中记录前驱和后继，再将整个表链接起来。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>通过对二叉搜索树的中序遍历，得到一个有序的链表。在搜索中记录前驱和后继，再将整个表链接起来。</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[丑数问题]]></title>
@@ -105,17 +120,6 @@
         <summary type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧1]]></title>
-        <id>https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao/</id>
-        <link href="https://supertange.github.io/post/idea-intellij-bi-xu-zhang-wo-de-shi-yong-ji-qiao/">
-        </link>
-        <updated>2019-12-24T08:43:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>把工具熟练好，工作起来才会得心应手，事半功倍。大名鼎鼎的intelliJ IDEA功能强大，对于JAVA开发者而言更是利器，熟练地使用IDEA必然是重中之重。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>把工具熟练好，工作起来才会得心应手，事半功倍。大名鼎鼎的intelliJ IDEA功能强大，对于JAVA开发者而言更是利器，熟练地使用IDEA必然是重中之重。</p>
 ]]></content>
     </entry>
 </feed>

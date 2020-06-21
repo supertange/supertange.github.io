@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>Mac下java和maven环境变量不生效问题 | Tange</title>
+<title>剑指offer--约瑟夫环问题 | Tange</title>
 <meta name="keywords" content="SuperTange的个人博客">
 <meta name="description" content="温故而知新">
 <link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1592723970100">
@@ -22,8 +22,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="Mac下java和maven环境变量不生效问题" />
-    <meta name="keywords" content="问题解决" />
+    <meta name="description" content="剑指offer--约瑟夫环问题" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -211,17 +211,12 @@
             <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li>
+<li><a href="#%E5%89%91%E6%8C%87offer-%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98">剑指offer--约瑟夫环问题</a>
 <ul>
-<li>
+<li><a href="#%E6%80%9D%E8%B7%AF">思路</a>
 <ul>
-<li><a href="#steep1">steep1</a>
-<ul>
-<li><a href="#check-files">check files</a></li>
-<li><a href="#edit-file">edit file</a></li>
-<li><a href="#if-installed-zsh-terminal">if installed zsh terminal</a></li>
-</ul>
-</li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E9%93%BE%E8%A1%A8on2">使用链表，O(N^2)</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E8%A7%A3%E6%B3%95on">数学解法，O(n)</a></li>
 </ul>
 </li>
 </ul>
@@ -476,8 +471,8 @@ window.addEventListener('load', function() {
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti/">
-      Mac下java和maven环境变量不生效问题
+    <a class="post-title-link" href="https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/">
+      剑指offer--约瑟夫环问题
     </a>
   </h1>
   <div class="post-meta">
@@ -485,83 +480,58 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-01-12</span>
+      <span>2020-06-21</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://supertange.github.io/tag/A4DChb_JV/">
-              <span>问题解决</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>145<span class="pc-show">字数</span></span>
+      <span>528<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>今天做项目用到了maven, 但是我的maven却不能全局使用，便开始搜索问题，解决问题。</p>
+                <p>剑指offer中的 约瑟夫环问题（丢手绢问题），本文采用了链表解法和数学解法两种方式。</p>
 <!-- more -->
-<h3 id="steep1">steep1</h3>
-<h4 id="check-files">check files</h4>
+<h1 id="剑指offer-约瑟夫环问题">剑指offer--约瑟夫环问题</h1>
 <blockquote>
-<p><code>~/.bashrc</code><br>
-<code>~/.bash_profile</code><br>
-<code>~/.profile</code></p>
+<p>这个问题是以弗拉维奥·约瑟夫命名的，他是1世纪的一名犹太历史学家。他在自己的日记中写道，他和他的40个战友被罗马军队包围在洞中。他们讨论是自杀还是被俘，最终决定自杀，并以抽签的方式决定谁杀掉谁。约瑟夫斯和另外一个人是最后两个留下的人。约瑟夫斯说服了那个人，他们将向罗马军队投降，不再自杀。约瑟夫斯把他的存活归因于运气或天意，他不知道是哪一个。 —— 【约瑟夫问题】维基百科</p>
 </blockquote>
-<h4 id="edit-file">edit file</h4>
-<ol>
-<li>Open Terminal</li>
-<li>Type</li>
-</ol>
-<pre><code class="language-bash">vim .bash_profile
+<h2 id="思路">思路</h2>
+<p>首先看题目的数据范围，若直接链表硬解，那么它的时间复杂度为O(mn)， 而 n&lt;10^5，若n的值很大，那么耗时将会特别长。</p>
+<h3 id="使用链表on2">使用链表，O(N^2)</h3>
+<p>首先想到的采用LinkedList来操作链表（删除的时间复杂度为一），但是查找<strong>将被删除</strong>的元素时间复杂度为N(从头开始找元素的位置)。ArrayList 被索引的时间复杂度为O(1) ，但是删除的时间复杂度为O(n)。<strong>但是使用的是ArrayList的remove方法</strong> 后面的元素是直接使用System.arraycopy来进行复制的。是内存连续空间的拷贝。相对于LinkedList的非连续地址访问，效率是会高很多的。</p>
+<pre><code class="language-java">System.arraycopy(elementData, index+1, elementData, index,
+                             numMoved);
 </code></pre>
-<ol start="3">
-<li>Type your java instalation dir in my case</li>
-</ol>
-<pre><code class="language-bash">#java8
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
+<p>使用ArrayList链表解法。</p>
+<pre><code class="language-java">public static int lastRemaining(int n, int m) {
+        ArrayList&lt;Integer&gt; arrayList = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; n; i++) {
+            arrayList.add(i);
+        }
+        int idx = 0;
+        while (n &gt; 1) {
+            // 下标要减一
+            idx = (idx + m - 1) % n;
+            arrayList.remove(idx);
+            n--;
+        }
+        return arrayList.get(0);
+    }
 </code></pre>
-<ol start="4">
-<li>Click ESC then type :wq (save and quit in vim)</li>
-<li>Then type</li>
-</ol>
-<pre><code class="language-bash">source .bash_profile
-</code></pre>
-<ol start="6">
-<li></li>
-</ol>
-<pre><code class="language-bash">echo $JAVA_HOME 
-</code></pre>
-<p>if you see the path you are all set.</p>
-<h4 id="if-installed-zsh-terminal">if installed zsh terminal</h4>
-<p>I edit .bash_profile i found</p>
-<pre><code class="language-bash">export JAVA_HOME=&quot;/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home 
-</code></pre>
-<p>But When I run terminal echo $JAVA_HOME it was returning empty, Later I found that the file .zshrc was missing I created this file with</p>
-<pre><code class="language-bash">touch .zshrc 
-</code></pre>
-<p>Then edit it by</p>
-<pre><code class="language-bash">vim .zshrc 
-</code></pre>
-<p>and wrote</p>
-<pre><code class="language-bash">source ~/.bash_profile
+<h3 id="数学解法on">数学解法，O(n)</h3>
+<p>约瑟夫环问题是有数学解法的。百度可得。</p>
+<pre><code class="language-java">				int pos = 0; // 最终活下来那个人的初始位置
+        for(int i = 2; i &lt;= n; i++){
+            pos = (pos + m) % i;  // 每次循环右移
+        }
+        return pos;
 </code></pre>
 
               </div>
@@ -573,7 +543,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://supertange.github.io/post/mac-xia-java-he-maven-huan-jing-bian-liang-bu-sheng-xiao-wen-ti/" title="Mac下java和maven环境变量不生效问题">Mac下java和maven环境变量不生效问题</a>
+      <a href="https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/" title="剑指offer--约瑟夫环问题">剑指offer--约瑟夫环问题</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -582,21 +552,15 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
   </ul>
   <div class="tags">
     
-      <a href="https://supertange.github.io/tag/A4DChb_JV/"># 问题解决</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="Mac ox10.13以上版本homebrew不能更新软件" href="https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian/">Mac ox10.13以上版本homebrew不能更新软件</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="Mac ox10.13以上版本homebrew不能更新软件" href="https://supertange.github.io/post/mac-ox1013-yi-shang-ban-ben-homebrew-bu-neng-geng-xin-ruan-jian/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="JAVA8新特性学习笔记" href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji/">JAVA8新特性学习笔记</a>
-        <a class="nav-mobile-next" title="JAVA8新特性学习笔记" href="https://supertange.github.io/post/java8-xin-te-xing-xue-xi-bi-ji/">下一篇</a>
+        <a class="nav-pc-next" title="二叉搜索树转双向循环链表" href="https://supertange.github.io/post/er-cha-sou-suo-shu-zhuan-shuang-xiang-xun-huan-lian-biao/">二叉搜索树转双向循环链表</a>
+        <a class="nav-mobile-next" title="二叉搜索树转双向循环链表" href="https://supertange.github.io/post/er-cha-sou-suo-shu-zhuan-shuang-xiang-xun-huan-lian-biao/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
