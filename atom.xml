@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://supertange.github.io</id>
     <title>Tange</title>
-    <updated>2020-06-21T07:24:51.045Z</updated>
+    <updated>2020-07-18T12:56:01.567Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://supertange.github.io"/>
     <link rel="self" href="https://supertange.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://supertange.github.io/images/avatar.png</logo>
     <icon>https://supertange.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Tange</rights>
+    <entry>
+        <title type="html"><![CDATA[十年学会编程]]></title>
+        <id>https://supertange.github.io/post/shi-nian-xue-hui-bian-cheng/</id>
+        <link href="https://supertange.github.io/post/shi-nian-xue-hui-bian-cheng/">
+        </link>
+        <updated>2020-07-18T12:04:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>用不到十年，就看有没有勇气取应用，愿不愿意看书，有没有点拨你的人。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>用不到十年，就看有没有勇气取应用，愿不愿意看书，有没有点拨你的人。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[剑指offer--约瑟夫环问题]]></title>
         <id>https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/</id>
@@ -109,17 +120,6 @@
         <summary type="html"><![CDATA[<p>今天IDEA突然不能使用，提示注册码失效，便开始了一番折腾。最后在一个群组中找到了解决方案，下载破解jar包 放到 IDEA的<code>bin</code> 目录下，随即重启idea就打不开了。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>今天IDEA突然不能使用，提示注册码失效，便开始了一番折腾。最后在一个群组中找到了解决方案，下载破解jar包 放到 IDEA的<code>bin</code> 目录下，随即重启idea就打不开了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[工欲善其事，必先利其器 —— IDEA使用技巧 2]]></title>
-        <id>https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2/</id>
-        <link href="https://supertange.github.io/post/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-idea-shi-yong-ji-qiao-2/">
-        </link>
-        <updated>2020-01-02T12:56:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>IDEA使用技巧2，更加常用的idea使用技巧, 结合上一篇文章食用。</p>
 ]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>数据结构与算法 —— 应掌握的排序算法 | Tange</title>
+<title>十年学会编程 | Tange</title>
 <meta name="keywords" content="SuperTange的个人博客">
 <meta name="description" content="温故而知新">
 <link rel="shortcut icon" href="https://supertange.github.io/favicon.ico?v=1595076957821">
@@ -22,8 +22,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-    <meta name="description" content="数据结构与算法 —— 应掌握的排序算法" />
-    <meta name="keywords" content="数据结构与算法分析" />
+    <meta name="description" content="十年学会编程" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -128,17 +128,9 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
-        <div class="post-list-sidebar">
-          <div class="sidebar-title">
-            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
-            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
-          </div>
-        </div>
-      
       <div class="sidebar-body pisces" id="sidebar_body">
         
-          <div class="post-side-meta" id="post_side_meta">
-            
+          
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://supertange.github.io/images/avatar.png"/>
@@ -206,195 +198,6 @@
   </div>
 
 </div>
-          </div>
-          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-            <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95">排序算法</a>
-<ul>
-<li><a href="#%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F">选择排序</a>
-<ul>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></li>
-</ul>
-</li>
-<li><a href="#%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F">冒泡排序</a>
-<ul>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B-2">工作流程</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%89%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95">三.二分搜索算法</a>
-<ul>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B-3">工作流程</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
-let active = 'active-show', activeClass = 'active-current';
-let tocWrapper = document.querySelector('#toc_wrapper');
-let tocContent = tocWrapper.children[0];
-let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
-
-function addTocNumber(elem, deep) {
-  if (!elem) {
-    return;
-  }
-  let prop = elem.__proto__;
-
-  if (prop === HTMLUListElement.prototype) {
-    for (let i = 0; i < elem.children.length; i++) {
-      addTocNumber(elem.children[i], deep + (i + 1) + '.');
-    }
-  } else if (prop === HTMLLIElement.prototype) {
-    // 保存li元素
-    lList.push(elem);
-    for (let i = 0; i < elem.children.length; i++) {
-      let cur = elem.children[i];
-      if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        if (autoNumber) {
-          cur.text =  deep + ' ' + cur.text;
-        }
-      } else if (cur.__proto__ === HTMLUListElement.prototype) {
-        addTocNumber(cur, deep);
-      }
-    }
-  }
-}
-
-
-document.addEventListener('scroll', function(e) {
-  if (lList.length <= 0) {
-    return;
-  }
-  let scrollTop = document.scrollingElement.scrollTop;
-  let dir;
-
-  if (lastTop - scrollTop > 0) {
-    dir = 'up';
-  } else {
-    dir = 'down';
-  }
-
-  lastTop = scrollTop;
-  if (scrollTop <= 0) {
-    if (lastIndex >= 0 && lastIndex < hList.length) {
-      lList[lastIndex].classList.remove(activeClass);
-    }
-    return;
-  }
-
-  let current = 0, hasFind = false;
-  for (let i = 0; i < hList.length; i++) {
-    if (hList[i].offsetTop > scrollTop) {
-      current = i;
-      hasFind = true;
-      break;
-    }
-  }
-  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-    current = hList.length - 1;
-  } else {
-    current--;
-  }
-  if (dir === 'down') {
-    if (current > lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex) 
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  } else {
-    if (current < lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex);
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  }
-});
-
-function removeParentActiveClass() {
-  let parents = tocContent.querySelectorAll('.'+active)
-  parents.forEach(function(elem) {
-    elem.classList.remove(active);
-  });
-}
-
-function addActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.add(activeClass);
-  }
-}
-
-function removeActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.remove(activeClass);
-  }
-}
-
-function addActiveLiElemment(elem, parent) {
-  if (!elem || elem === parent) {
-    return;
-  } else {
-    if (elem.__proto__ === HTMLLIElement.prototype) {
-      elem.classList.add(active);
-    }
-    addActiveLiElemment(elem.parentElement, parent);
-  }
-}
-
-function showToc() {
-  if (tocWrapper) {
-    postBody = document.querySelector('#post_body');
-    for (let i = 0; i < postBody.children.length; i++) {
-      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-        hList.push(postBody.children[i]);
-      }
-    }
-    if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-    } else if (tocWrapper.classList.contains('no_compress')){
-      tocContent.classList.add('expanded');
-    } else {
-      if (hList.length > 10) {
-        active = 'active-hidden'
-        tocContent.classList.add('closed');
-      } else {
-        tocContent.classList.add('expanded');
-      }
-    }
-  }
-}
-addTocNumber(tocContent, '');
-
-window.addEventListener('load', function() {
-  showToc();
-  document.querySelector('#sidebar').style='display: block;';
-  tocWrapper.classList.add('toc-active');
-  setTimeout(function() {
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
-  }, 500)
-})
-
-</script>
-          </div>
         
       </div>
     </div>
@@ -480,8 +283,8 @@ window.addEventListener('load', function() {
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://supertange.github.io/post/必须熟练排序方法/">
-      数据结构与算法 —— 应掌握的排序算法
+    <a class="post-title-link" href="https://supertange.github.io/post/shi-nian-xue-hui-bian-cheng/">
+      十年学会编程
     </a>
   </h1>
   <div class="post-meta">
@@ -489,140 +292,55 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2017-02-11</span>
+      <span>2020-07-18</span>
     </span>
-    
-      <span class="meta-item">
-        <span class="post-meta-divider pc-show">|</span>
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://supertange.github.io/tag/T-FN0lgT0/">
-              <span>数据结构与算法分析</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>776<span class="pc-show">字数</span></span>
+      <span>645<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
-<!--more-->
-<h1 id="排序算法">排序算法</h1>
-<h2 id="选择排序">选择排序</h2>
-<h3 id="工作流程">工作流程</h3>
+                <p>用不到十年，就看有没有勇气取应用，愿不愿意看书，有没有点拨你的人。</p>
+<!-- more -->
 <ol>
-<li>在未排序序列中找到最小（大）元素，存放到排序序列的起始位置</li>
-<li>从剩余未排序元素中继续寻找最小（大）元素</li>
-<li>然后放到已排序序列的末尾。</li>
-<li>以此类推，直到所有元素均排序完毕。<br>
-如示例图:<br>
-<img src="./images/Selection_sort_animation.gif"></li>
-</ol>
-<p>代码如下：</p>
-<pre><code>//  重复练习.c
-//  几种排序方式
-//
-//  Created by Next on 17/2/11.
-//  Copyright © 2017年 Next. All rights reserved.
-//
-#include &lt;stdio.h&gt;
-int main(){
-    //选择排序
-     int arr[6];
-     int len=sizeof(arr)/sizeof(arr[0]);
-    for (int i=0; i&lt;len; i++) {
-        printf(&quot;请输入第%d个数&quot;,i+1);
-        scanf(&quot;%d&quot;,&amp;arr[i]);
-    }
-    for (int i=0; i&lt;len-1; i++) {
-        for (int j=i+1; j&lt;len; j++) {
-            if (arr[i]&lt;arr[j]) {
-                int temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-            }
-        }
-    }
-    printf(&quot;我已将你数入的数字从大到小排序成功\n&quot;);
-    for (int i=0; i&lt;len; i++) {
-        printf(&quot;%d\t&quot;,arr[i]);
-    }
-    return 0;
- ｝
-</code></pre>
-<h2 id="冒泡排序">冒泡排序</h2>
-<h3 id="工作流程-2">工作流程</h3>
+<li>
+<p>不要妄想在短时间内学好编程。书店里哪些所谓的21天学会编程只不过是让你学会表面的东西。而不能让你学好</p>
+</li>
+<li>
+<p><strong>动手编程</strong>。最好的学习方式是边学边做。</p>
+</li>
+<li>
+<p><strong>和其他程序员交流</strong>；<strong>阅读别人的代码</strong>。这比看书或或者参加培训还要重要。</p>
+</li>
+<li>
+<p><strong>和其他程序员一起参与一些项目</strong>。在项目中成为最出色的程序员；在另一些项目中成为最差的程序员。当在最出色程序员的时候，要测试你领导项目的能力，用你的视野来启发别人。如果你是项目中最差的哪一个，要学习牛人们在做什么，如果他们不喜欢做的，你要拿来做。(因为他们再让你为他们做事情，使劲儿学习)</p>
+</li>
+<li>
+<p><strong>接手并推进别人的项目。理解其他人写的代码。如果别人有没有考虑到的问题，你能理解并修复这些问题。思考并设计你的软件，让这些软件容易被他人维护</strong></p>
+</li>
+<li>
+<p>理解执行一条指令要花多长时间，从内存中取一个字（要考虑缓存有没有命中的情况）要多久，从硬盘中连续读字节要多久，在硬盘中寻址定位要多久？</p>
+</li>
+<li>
+<p>Fred Brooks 在他的书《没有银弹》中给出了建议：</p>
 <ol>
-<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
-<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。3.在这一点，最后的元素应该会是最大的数。</li>
-<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
-<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。<br>
-如图:<br>
-<img src="./images/Bubble_sort_animation.gif"></li>
+<li>Systematically identify top designers as early as possible.</li>
+<li>Assign a career mentor to be responsible for the development of the prospect and carefully keep a career file.</li>
+<li>Provide opportunities for growing designers to interact and stimulate each other.</li>
 </ol>
-<p>代码如下:</p>
-<pre><code>#include &lt;stdio.h&gt;
-int main(){
-    for (int i=0; i&lt;len-1; i++) {
-        for (int j=0; j&lt;len-1-i; j++) {
-            if (arr[j]&lt;arr[j+1]) {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            }
-        }
-    }
-    printf(&quot;主人我已将你输入的数字从大到小排序好了\n&quot;);
-    for (int i=0; i&lt;len; i++) {
-        printf(&quot;%d\t&quot;,arr[i]);
-    }
-}
-</code></pre>
-<h2 id="三二分搜索算法">三.二分搜索算法</h2>
-<h3 id="工作流程-3">工作流程</h3>
-<p>是一种在有序数组中查找某一特定元素的搜索算法。搜索过程从数组的中间元素开始，如果中间元素正好是要查找的元素，则搜索过程结束；如果某一特定元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半中查找，而且跟开始一样从中间元素开始比较。如果在某一步骤数组为空，则代表找不到。这种搜索算法每一次比较都使搜索范围缩小一半。</p>
-<p>如图:<br>
-<img src="./images/Binary_search_into_array.png"></p>
-<p>代码如下:</p>
-<pre><code>include&lt;stdio.h&gt;
-int main(){
-    //二分法查找有数列中的数字
-    int array[6]={12,23,34,45,56,67};
-    int min=0;
-    int length=sizeof(array)/sizeof(arr[0]);
-    int max=length;
-    int mid=(max+min)/2;
-    int key;
-    printf(&quot;请输入你要查询的数字&quot;);
-    scanf(&quot;%d&quot;,&amp;key);
-    while (array[mid]!=key) {
-        if (key&lt;array[mid]) {
-            max=mid-1;
-        }else if(key&gt;array[mid]){
-            min=mid+1;
-        }
-        mid=(max+min)/2;
-    }
-    printf(&quot;主人我找到了!!key%d的下为&quot;,mid);
-    return 0;
-}
-
-</code></pre>
-<p>这几种在教学中经常用到的算法，切记要牢记于心。</p>
+</li>
+<li>
+<p>伟大的人有一种内在的特质，这种特质往往比接受训练更重要。但是，这些特质是从哪里来的呢？与生俱来的？还是通过后天勤奋而来的？动画片《料理鼠王》里的幻象大厨Auguste Gusteau说的那样：“<strong>谁都能做饭，但只有那些无所畏惧的人才能成为大厨！</strong>”我认为“<strong>把你生命中的大部分时间花在有针对性的练习上</strong>”这种精神，看作一种自愿奉献的精神！但或许“无所畏惧”才是体现这种精神的真谛。或者，就像是《料理鼠王》里那个与 Gusteau 作对的刻薄的美食评论家 Anton Ego 说的那样：“不是任何人都能成为伟大的艺术家，不过，伟大的艺术家可以来自任何地方。”</p>
+</li>
+</ol>
 
               </div>
               <div class="post-footer">
@@ -633,7 +351,7 @@ int main(){
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://supertange.github.io/post/必须熟练排序方法/" title="数据结构与算法 —— 应掌握的排序算法">数据结构与算法 —— 应掌握的排序算法</a>
+      <a href="https://supertange.github.io/post/shi-nian-xue-hui-bian-cheng/" title="十年学会编程">十年学会编程</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -642,21 +360,15 @@ int main(){
   </ul>
   <div class="tags">
     
-      <a href="https://supertange.github.io/tag/T-FN0lgT0/"># 数据结构与算法分析</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="C语言 —— 基础位运算" href="https://supertange.github.io/post/基础位运算/">C语言 —— 基础位运算</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="C语言 —— 基础位运算" href="https://supertange.github.io/post/基础位运算/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="2017年我的规划" href="https://supertange.github.io/post/2017年我的规划/">2017年我的规划</a>
-        <a class="nav-mobile-next" title="2017年我的规划" href="https://supertange.github.io/post/2017年我的规划/">下一篇</a>
+        <a class="nav-pc-next" title="剑指offer--约瑟夫环问题" href="https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/">剑指offer--约瑟夫环问题</a>
+        <a class="nav-mobile-next" title="剑指offer--约瑟夫环问题" href="https://supertange.github.io/post/jian-zhi-offer-yue-se-fu-huan-wen-ti/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
